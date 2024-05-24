@@ -1,0 +1,104 @@
+---
+layout: base
+---
+<div class="container">
+    <div class="section">
+        <div class="content">
+            <h1 class="title">{{ page.title }}</h1>
+            <p class="subtitle">{{ page.description }}</p>
+            <nav class="level">
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Source</p>
+                        <p class="title">{{ page.video_source }}</p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Type</p>
+                        <p class="title">{{ page.video_type }}</p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Duration</p>
+                        <p class="title">{{ page.video_duration }}</p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Category</p>
+                        <p class="title">{{ page.category }}</p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Start Time</p>
+                        <p class="title">{{ page.start_time }}</p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">End Time</p>
+                        <p class="title">{{ page.end_time }}</p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Date</p>
+                        <p class="title">{{ page.date | date: '%B %d, %Y' }}</p>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="columns is-multiline">
+                <div class="column is-12">
+                    {% if page.video_source == 'YouTube' %}
+                        <div class="video-container">
+                            <iframe
+                                width="560"
+                                height="315"
+                                src="{{ page.video_url | replace: 'watch?v=', 'embed/' }}"
+                                frameborder="0"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    {% else %}
+                        <div class="video-container">
+                            <video width="560" height="315" controls>
+                                <source src="{{ page.video_url }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="tags">
+                {% for tag in page.tags %}
+                    <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+    }
+
+    .video-container iframe,
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
