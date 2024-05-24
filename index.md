@@ -9,7 +9,7 @@ show_sidebar: false
   <div class="hero-body">
     <div class="container is-fluid">
       <h1 class="title">
-        Welcome to the Bulma Jekyll Theme
+        Welcome to the Im Jekyll Theme
       </h1>
       <h2 class="subtitle">
         Responsive, fast, and minimalistic open-source theme
