@@ -16,9 +16,11 @@
 >
     {% include head.html %}
     <body>
-        {% if site.cookie_policy %}
-            {% include cookie-banner.html %}
-        {% endif %}
+        {% comment %}
+            {% if site.cookie_policy %}
+                {% include cookie-banner.html %}
+            {% endif %}
+        {% endcomment %}
         {% include header.html %}
         {% include ad/adsense.html type="top-leaderboard" %}
         <section class="section">
