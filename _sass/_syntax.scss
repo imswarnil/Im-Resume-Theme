@@ -103,3 +103,40 @@
 .highlight .mx {
   color: #90a959;
 }
+/* Adjust button position */
+.code-header {
+  position: relative;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+}
+
+/* Change button to Bulma success */
+.copy-code-button.is-success {
+  background-color: #23d160;
+}
+
+.copy-code-button.is-success .text {
+  color: black;
+}
+
+/* Toast styles */
+.toast {
+  position: absolute;
+  top: calc(100% + 10px); /* Position below the code header */
+  right: 0;
+  z-index: 1;
+  display: none;
+}
+
+/* Stylize Bulma toast */
+.toast.is-success {
+  background-color: #23d160;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}

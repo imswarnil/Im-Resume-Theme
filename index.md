@@ -4,7 +4,7 @@ subtitle: This is the demo site for Bulma Clean Theme
 layout: base    
 sidebar : false
 ---
-
+ {% include ad/adsense.html type="top-leaderboard" %}
 <section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
