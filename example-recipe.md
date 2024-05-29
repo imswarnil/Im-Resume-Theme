@@ -5,7 +5,7 @@ subtitle: Tastes great and easy to cook
 description: An example recipe page
 author: CS Rhymes
 date: 2021-03-02
-show_sidebar: false
+sidebar: false
 image: /bulma-clan-theme/img/recipe-example.jpg
 hero_image: /bulma-clean-theme/img/recipe-example.jpg
 hero_darken: true
@@ -56,7 +56,7 @@ title: An Example Recipe Page
 subtitle: Tastes great and easy to cook
 author: CS Rhymes
 date: 2021-03-02
-show_sidebar: false
+sidebar: false
 image: /bulma-clan-theme/img/recipe-example.jpg
 hero_image: /bulma-clean-theme/img/recipe-example.jpg
 ingredients:

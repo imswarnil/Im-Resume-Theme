@@ -4,7 +4,7 @@ title: Top Navigation
 subtitle: Navigation
 menubar: docs_menu
 toc: true
-show_sidebar: false
+sidebar: false
 ---
 
 ## Creating Top Navigation

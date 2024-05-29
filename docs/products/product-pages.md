@@ -3,7 +3,7 @@ layout: page
 title: Product Pages
 subtitle: Products
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 toc: true
 ---
 
@@ -48,7 +48,7 @@ collections:
     output: true
     layout: product
     image: https://via.placeholder.com/800x600
-    show_sidebar: false
+    sidebar: false
 ```
 
 You can also set default product page values here if you like, such as the layout or image. 

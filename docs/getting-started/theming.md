@@ -4,7 +4,7 @@ title: Theming
 subtitle: Getting Started
 menubar: docs_menu
 toc: true
-show_sidebar: false
+sidebar: false
 ---
 
 ## Bulma

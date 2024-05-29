@@ -3,7 +3,7 @@ layout: page
 title: Image Gallery
 subtitle: Page Component
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 toc: true
 ---
 

@@ -2,7 +2,7 @@
 layout: page
 title: Upgrading to v1
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 toc: true
 ---
 

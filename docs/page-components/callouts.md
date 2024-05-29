@@ -3,7 +3,7 @@ layout: page
 title: Callouts
 subtitle: Page Components
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 toc: true
 ---
 

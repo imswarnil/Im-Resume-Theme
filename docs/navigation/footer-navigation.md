@@ -4,7 +4,7 @@ title: Footer Navigation
 subtitle: Navigation
 menubar: docs_menu
 toc: true
-show_sidebar: false
+sidebar: false
 redirect_from: 
   - /page-5/
 ---

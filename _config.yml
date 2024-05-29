@@ -26,6 +26,10 @@ disqus:
   # shortname: my_disqus_shortname
   shortname: csrhymes
 
+# _Adsense Ads
+ad_publisher_id: 'ca-pub-1234567890123456' # replace with your AdSense publisher ID
+adsense: true # set to false to disable ads
+
 
 plugins:
   - jekyll-sitemap
@@ -62,7 +66,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      show_sidebar: true
+      sidebar: true
   -
     scope:
       path: ""
@@ -71,7 +75,7 @@ defaults:
       author: "C.S. Rhymes"
       layout: post
       image: https://via.placeholder.com/1200x800
-      show_sidebar: true
+      sidebar: true
 
 markdown: kramdown
 highlighter: rouge
@@ -85,5 +89,5 @@ collections:
     output: true
     layout: product
     image: https://via.placeholder.com/800x600
-    show_sidebar: false
+    sidebar: false
 

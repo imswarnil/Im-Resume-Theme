@@ -4,7 +4,7 @@ title: Sidebar
 subtitle: Getting Started
 menubar: docs_menu
 toc: true
-show_sidebar: false
+sidebar: false
 redirect_from:
     - /page-1/
     - /page-2/
@@ -18,4 +18,4 @@ It uses the `_includes/latest-posts.html` file, so if you would like the sidebar
 
 ## Sidebar Visibility
 
-If you want to show the sidebar with latest posts then set `show_sidebar: true` in the page's frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your site's `_config.yml`.
+If you want to show the sidebar with latest posts then set `sidebar: true` in the page's frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your site's `_config.yml`.

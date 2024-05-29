@@ -3,7 +3,7 @@ layout: page
 title: Post Series
 subtitle: Posts
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 toc: true
 ---
 

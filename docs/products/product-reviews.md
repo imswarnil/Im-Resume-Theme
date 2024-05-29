@@ -3,7 +3,7 @@ layout: page
 title: Product Reviews
 subtitle: Products
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 toc: true
 ---
 

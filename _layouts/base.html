@@ -1,7 +1,7 @@
 <!doctype html>
-{% if page.show_sidebar and has_left_sidebar %}
+{% if page.sidebar and has_left_sidebar %}
     {% assign content_width = 'is-4' %}
-{% elsif page.show_sidebar or has_left_sidebar %}
+{% elsif page.sidebar or has_left_sidebar %}
     {% assign content_width = 'is-8' %}
 {% else %}
     {% assign content_width = 'is-12' %}
@@ -20,6 +20,37 @@
             {% include cookie-banner.html %}
         {% endif %}
         {% include header.html %}
+        <div class="container">
+            {% include ad/dummy.html type="leaderboard" %}
+        </div>
+
+        <div class="container">
+            {% include ad/adsense.html type="square" %}
+        </div>
+
+        <div class="container">
+            {% include ad/adsense.html type="skyscraper" %}
+        </div>
+
+        <div class="container">
+            {% include ad/adsense.html type="top-leaderboard" %}
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <div class="column {{ content_width }}">
+                        {{ content }}
+                    </div>
+                    {% if site.posts and page.sidebar %}
+                        <div class="column is-4-desktop is-4-tablet">
+                            {% include sidebar.html %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
                 {{ content }}

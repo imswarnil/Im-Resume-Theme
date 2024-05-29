@@ -2,6 +2,8 @@
 title: Cookie Policy
 layout: page
 permalink: /cookie-policy
+sidebar : true
+has_left_sidebar : true
 ---
 
 # Cookie Policy

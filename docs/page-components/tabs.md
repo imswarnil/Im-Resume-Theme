@@ -3,7 +3,7 @@ layout: page
 title: Tabs
 subtitle: Page Components
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 toc: true
 tabs: example_tabs
 redirect_from:
@@ -22,7 +22,7 @@ The tabs gets its content from a data file in your site's `_data` directory. Sim
 title: Page with tabs
 subtitle: Demo page with tabs
 layout: page
-show_sidebar: false
+sidebar: false
 menubar: example_menu
 tabs: example_tabs
 ```

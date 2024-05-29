@@ -4,7 +4,7 @@ title: Menubar
 subtitle: Navigation
 menubar: docs_menu
 toc: true
-show_sidebar: false
+sidebar: false
 redirect_from: 
   - /page-3/
 ---
@@ -16,11 +16,11 @@ The menubar is a menu in a column on the left of the page. The menubar gets its 
 If you have a file `_data/example_menu.yml` then set the menubar to `example_menu`.
 
 ```yaml
-show_sidebar: false
+sidebar: false
 menubar: example_menu
 ```
 
-You will probably want to disable `show_sidebar`. Otherwise there will be little room for the page content. 
+You will probably want to disable `sidebar`. Otherwise there will be little room for the page content. 
 
 ## Creating a menubar data file
 

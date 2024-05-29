@@ -58,7 +58,7 @@ collections:
     output: true
     layout: product
     image: https://via.placeholder.com/800x600
-    show_sidebar: false
+    sidebar: false
 ```
 
 Now when you run jekyll build it will output a load of product pages for you, now we just need a way of getting to them. This is where the product category page comes in. 
@@ -72,7 +72,7 @@ Create a page, such as products.md or in my case books.md and set it to use the 
 title: Products
 subtitle: Check out our range of products
 layout: product-category
-show_sidebar: false
+sidebar: false
 sort: title
 ---
 

@@ -4,7 +4,7 @@ title: Creating A Page
 subtitle: Pages
 menubar: docs_menu
 toc: true
-show_sidebar: false
+sidebar: false
 ---
 
 ## Creating A Page

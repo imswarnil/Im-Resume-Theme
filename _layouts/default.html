@@ -3,9 +3,9 @@
     {% assign has_left_sidebar = true %}
 {% endif %}
 
-{% if page.show_sidebar and has_left_sidebar %}
+{% if page.sidebar and has_left_sidebar %}
     {% assign content_width = 'is-4' %}
-{% elsif page.show_sidebar or has_left_sidebar %}
+{% elsif page.sidebar or has_left_sidebar %}
     {% assign content_width = 'is-8' %}
 {% else %}
     {% assign content_width = 'is-12' %}
@@ -22,6 +22,7 @@
     {% include head.html %}
     <body>
         {% include header.html %}
+        {% include ad/dummy.html type="square" %}
         {% unless page.hide_hero %}
             {% include hero/ad.html %}
         {% endunless %}
@@ -46,13 +47,15 @@
                         {% include gallery.html %}
                         {{ content }}
                     </div>
-                    {% if site.posts and page.show_sidebar %}
+                    {% if site.posts and page.sidebar %}
                         <div class="column is-4-desktop is-4-tablet is-sticky">
                             <div class="box my-5">
                                 {% assign contentsTitle = page.toc_title | default: 'Contents' %}
                                 {% include toc.html html=content class='menu-list' h_min=2 h_max=3 contents_title=contentsTitle %}
                             </div>
+                            {% include ad/adsense.html type="square" %}
                             {% include latest-posts.html %}
+                            {% include ad/adsense.html type="square" %}
                             <div class="menu my-4 ">
                                 <p class="menu-label">Archive</p>
                                 <ul class="menu-list">

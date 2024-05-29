@@ -1,0 +1,11 @@
+{% assign sidebar_type = page.sidebar_type | default: 'default' %}
+{% case sidebar_type %}
+    {% when 'blog' %}
+        {% include sidebar/blog.html %}
+    {% when 'page' %}
+        {% include sidebar/page.html %}
+    {% when 'custom' %}
+        {% include sidebar/custom.html %}
+    {% else %}
+        {% include sidebar/default.html %}
+{% endcase %}

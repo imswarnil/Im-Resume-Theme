@@ -3,7 +3,7 @@ layout: page
 title: Showcases
 subtitle: Page Components
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 toc: true
 ---
 
@@ -58,7 +58,7 @@ title: Showcase
 subtitle: An example showcase page
 layout: page
 showcase: showcase_example
-show_sidebar: false
+sidebar: false
 ```
 
 

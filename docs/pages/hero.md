@@ -3,7 +3,7 @@ layout: page
 title: Hero
 subtitle: Pages
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 redirect_from:
     - /page-without-hero/
 ---

@@ -3,7 +3,7 @@ layout: page
 title: Category Page
 subtitle: Products
 menubar: docs_menu
-show_sidebar: false
+sidebar: false
 toc: true
 ---
 
@@ -17,7 +17,7 @@ Create a page, for example `products.md`, with the `layout: product-category` in
 title: Products
 subtitle: Check out our range of products
 layout: product-category
-show_sidebar: false
+sidebar: false
 sort: title
 ```
 

@@ -89,7 +89,7 @@ defaults:
       author: "Author Name"
       layout: post
       hero_image: /path/to/hero-image.jpg
-      show_sidebar: true
+      sidebar: true
 ```
 
 ## Styles
