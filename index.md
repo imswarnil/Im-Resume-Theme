@@ -1,5 +1,5 @@
 ---
-title: Im Jekyll Theme
+title: Im Swarnil Theme
 subtitle: This is the demo site for Bulma Clean Theme
 layout: base    
 sidebar : false
@@ -61,7 +61,6 @@ sidebar : false
     </div>
   </div>
 </div>
-
         </div>
       </div>
     </div>

@@ -3,9 +3,9 @@
     {% assign has_left_sidebar = true %}
 {% endif %}
 
-{% if page.show_sidebar and has_left_sidebar %}
+{% if page.sidebar and has_left_sidebar %}
     {% assign content_width = 'is-4' %}
-{% elsif page.show_sidebar or has_left_sidebar %}
+{% elsif page.sidebar or has_left_sidebar %}
     {% assign content_width = 'is-8' %}
 {% else %}
     {% assign content_width = 'is-12' %}
@@ -47,7 +47,7 @@
                         {% include gallery.html %}
                         {{ content }}
                     </div>
-                    {% if site.posts and page.show_sidebar %}
+                    {% if site.posts and page.sidebar %}
                         <div class="column is-4-desktop is-4-tablet is-sticky">
                             <div class="box my-5">
                                 {% assign contentsTitle = page.toc_title | default: 'Contents' %}
