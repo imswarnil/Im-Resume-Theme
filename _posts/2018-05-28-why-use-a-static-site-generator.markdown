@@ -4,6 +4,8 @@ title: "My First Post"
 date: 2024-05-22
 image: "https://via.placeholder.com/600x400"
 permalink : /post
+show_sidebar: true
+sidebar_type : custom
 ---
 
 # Welcome to My First Post
