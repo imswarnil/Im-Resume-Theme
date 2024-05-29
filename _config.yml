@@ -27,9 +27,9 @@ disqus:
   shortname: csrhymes
 
 # _Adsense Ads
-ad_publisher_id: 'ca-pub-1234567890123456' # replace with your AdSense publisher ID
-adsense: true # set to false to disable ads
-
+# config.yml
+adsense: true
+data-ad-client: "ca-pub-1291242080282540"
 
 plugins:
   - jekyll-sitemap

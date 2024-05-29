@@ -1,83 +1,306 @@
-{% if site.adsense %}
-    {%- case include.type -%}
-        {%- when 'square' -%}
-            <!-- Square ( Responsive ) -->
-            <style>
-                .square-container {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh; /* Adjust as needed */
-                }
+{%- case include.type -%}
+    {%- when 'square' -%}
+        <!-- Square ( Responsive ) -->
+        <style>
+            .square {
+                width: auto;
+                height: 250px;
+            }
 
+            @media (max-width: 799px) {
                 .square {
+                    width: 300px;
+                    height: 250px;
+                }
+            }
+
+            @media (max-width: 499px) {
+                .square {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        </style>
+
+        <div
+            class="columns is-centered is-vcentered is-paddingless"
+        >
+            <ins
+                class="adsbygoogle  square uk-align-center animate-on-scroll"
+                data-ad-client="{{ site.data-ad-client }}"
+                data-ad-slot="7663977887"
+            >
+            </ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    {%- when 'button' -%}
+        <!-- Square ( Responsive ) -->
+        <style>
+            .button {
+                width: auto;
+                height: 60px;
+            }
+        </style>
+
+        <ins
+            class="adsbygoogle button"
+            data-ad-client="{{ site.data-ad-client }}"
+            data-ad-slot="3836856744"
+        ></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    {%- when 'top-leaderboard' -%}
+        <style>
+            .top-leaderboard {
+                height: 90px;
+                width: 100%;
+            }
+
+            @media (max-width: 499px) {
+                .top-leaderboard {
+                    height: 60px;
+                }
+            }
+        </style>
+        <div
+            class="uk-container uk-padding-small"
+        >
+            <ins
+                class="adsbygoogle top-leaderboard uk-align-center animate-on-scroll"
+                data-ad-client="{{ site.data-ad-client }}"
+                data-ad-slot="3487917390"
+            >
+            </ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    {%- when 'small-leaderboard' -%}
+        <style>
+            .small-leaderboard {
+                width: 100%;
+                height: 90px;
+            }
+
+            @media (max-width: 500px) {
+                .small-leaderboard {
+                    height: 90px;
+                }
+            }
+
+            @media (max-width: 800px) {
+                .small-leaderboard {
+                    height: 50px;
+                }
+            }
+        </style>
+
+        <div
+            class="columns is-centered is-vcentered is-paddingless"
+        >
+            <ins
+                class="adsbygoogle  small-leaderboard uk-align-center animate-on-scroll"
+                data-ad-client="{{ site.data-ad-client }}"
+                data-ad-slot="3487917390"
+            >
+            </ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    {%- when 'large-leaderboard' -%}
+        <style>
+            .large-leaderboard {
+                width: auto;
+                height: 250px;
+            }
+
+            @media (max-width: 500px) {
+                .large-leaderboard {
                     width: auto;
                     height: 250px;
-                    margin: 20px; /* Adjust margins as needed */
                 }
+            }
 
-                @media (max-width: 799px) {
-                    .square {
-                        width: 300px;
-                        height: 250px;
-                    }
+            @media (max-width: 800px) {
+                .large-leaderboard {
+                    width: 300px;
+                    height: 100px;
                 }
+            }
+        </style>
 
-                @media (max-width: 499px) {
-                    .square {
-                        width: 250px;
-                        height: 250px;
-                    }
+        <div
+            class="columns is-centered is-vcentered is-paddingless"
+        >
+            <ins
+                class="adsbygoogle  large-leaderboard uk-align-center animate-on-scroll"
+                data-ad-client="{{ site.data-ad-client }}"
+                data-ad-slot="3487917390"
+            >
+            </ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    {%- when 'skyscraper' -%}
+        <style>
+            .skyscraper {
+                width: 250px;
+                height: 250px;
+            }
+
+            @media (min-width: 500px) {
+                .skyscraper {
+                    width: 320px;
+                    height: 480px;
                 }
-            </style>
+            }
 
-            <div class="square-container">
-                <div class="square">
-                    <ins
-                        class="adsbygoogle square"
-                        data-ad-client="{{ site.ad_publisher_id }}"
-                        data-ad-slot="7663977887"
-                    >
-                    </ins>
-                </div>
-            </div>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-
-        {%- when 'button' -%}
-            <!-- Button ( Responsive ) -->
-            <style>
-                .button-container {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh; /* Adjust as needed */
+            @media (min-width: 800px) {
+                .skyscraper {
+                    width: 300px;
+                    height: 900px;
                 }
+            }
 
-                .button {
-                    width: auto;
-                    height: 60px;
-                    margin: 20px; /* Adjust margins as needed */
+            @media (min-width: 1200px) {
+                .skyscraper {
+                    width: 300px;
+                    height: 1050px;
                 }
-            </style>
+            }
+        </style>
 
-            <div class="button-container">
-                <div class="button">
-                    <ins
-                        class="adsbygoogle button"
-                        data-ad-client="{{ site.ad_publisher_id }}"
-                        data-ad-slot="3836856744"
-                    >
-                    </ins>
-                </div>
-            </div>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+        <!-- Horizontal ( Responsive ) -->
+        <div
+            class="columns is-centered is-vcentered is-paddingless"
+        >
+            <ins
+                class="adsbygoogle  skyscraper uk-align-center animate-on-scroll"
+                data-ad-client="{{ site.data-ad-client }}"
+                data-ad-slot="8939839370"
+            >
+            </ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
 
-            <!-- Add similar styling for other ad types -->
-        {%- else -%}
-            <!-- Invalid ad type -->
-    {%- endcase -%}
-{% endif %}
+    {%- when 'skyscraper-small' -%}
+        <style>
+            .small-skyscraper {
+                width: 200px;
+                height: 200px;
+                border-top: 10px solid #e53935;
+                border-bottom: 10px solid #e53935;
+                border-radius: 10px;
+                background-color: #f7f7f7;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                text-align: center;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            @media (min-width: 500px) {
+                .small-skyscraper {
+                    width: 320px;
+                    height: 480px;
+                }
+            }
+
+            @media (min-width: 800px) {
+                .small-skyscraper {
+                    width: 300px;
+                    height: 600px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .small-skyscraper {
+                    width: 300px;
+                    height: 700px;
+                }
+            }
+
+            @media (max-width: 1200px) and (min-width: 501px) {
+                .small-skyscraper {
+                    width: 300px;
+                    height: 600px;
+                }
+            }
+
+            @media (max-width: 500px) {
+                .small-skyscraper {
+                    width: 300px;
+                    height: 250px;
+                }
+            }
+        </style>
+
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- small skyscraper -->
+        <ins
+            class="adsbygoogle small-skyscraper"
+            data-ad-client="{{ site.data-ad-client }}"
+            data-ad-slot="3487917390"
+        ></ins>
+
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    {%- when 'article' -%}
+        <style>
+            .article {
+                border-radius: 10px;
+                background-color: #f7f7f7;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 2em auto;
+                text-align: center;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            }
+        </style>
+
+        <ins
+            class="adsbygoogle article"
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="{{ site.data-ad-client }}"
+            data-ad-slot="6501428979"
+        ></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    {%- when 'multiplex' -%}
+        <ins
+            class="adsbygoogle ad"
+            style="display:block"
+            data-ad-format="autorelaxed"
+            data-ad-client="{{ site.data-ad-client }}"
+            data-ad-slot="6808134701"
+        ></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    {%- else -%}
+        <!-- Invalid ad type -->
+{%- endcase -%}
