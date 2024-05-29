@@ -40,3 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const blockquote = document.querySelector("blockquote");
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          typewriterEffect(entry.target.querySelector("p"));
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+  
+    observer.observe(blockquote);
+  });
+  
+  function typewriterEffect(element) {
+    const text = element.innerText;
+    element.innerHTML = "";
+    let i = 0;
+    const typing = setInterval(() => {
+      element.innerHTML += text[i];
+      i++;
+      if (i === text.length) clearInterval(typing);
+    }, 100); // Adjust typing speed as needed
+  }
+  
