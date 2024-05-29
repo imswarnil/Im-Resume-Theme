@@ -40,29 +40,47 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const blockquote = document.querySelector("blockquote");
-  
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          typewriterEffect(entry.target.querySelector("p"));
-          observer.unobserve(entry.target);
-        }
-      });
+document.addEventListener("DOMContentLoaded", () => {
+  const blockquotes = document.querySelectorAll("blockquote");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        typewriterEffect(entry.target.querySelector("p"));
+        observer.unobserve(entry.target);
+      }
     });
-  
+  });
+
+  blockquotes.forEach((blockquote) => {
     observer.observe(blockquote);
   });
-  
-  function typewriterEffect(element) {
-    const text = element.innerText;
-    element.innerHTML = "";
-    let i = 0;
-    const typing = setInterval(() => {
-      element.innerHTML += text[i];
-      i++;
-      if (i === text.length) clearInterval(typing);
-    }, 100); // Adjust typing speed as needed
+});
+
+function typewriterEffect(element) {
+  const text = element.innerText;
+  element.innerHTML = "";
+  let i = 0;
+  const typing = setInterval(() => {
+    element.innerHTML += text[i];
+    playTypingSound(); // Play typing sound effect
+    i++;
+    if (i === text.length) {
+      clearInterval(typing);
+      stopTypingSound(); // Stop typing sound effect when typing completes
+    }
+  }, 100); // Adjust typing speed as needed
+}
+
+function playTypingSound() {
+  const audio = new Audio("../../../keyboard.mp3"); // Path to the typing sound effect
+  audio.play();
+}
+
+function stopTypingSound() {
+  const audio = document.querySelector("audio");
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
   }
-  
+}

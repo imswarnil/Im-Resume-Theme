@@ -28,4 +28,3 @@ Quote: "The only limit to our realization of tomorrow will be our doubts of toda
 > Somewhere, something incredible is waiting to be known
 
 
-> Quote here OKLAY
