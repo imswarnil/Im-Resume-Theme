@@ -4,8 +4,9 @@ title: Creating a docs site with Bulma Clean Theme
 description: How to create a docs site for your project with Bulma Clean Theme 
 date: 2020-05-08 09:00:07
 hero_image: https://www.csrhymes.com/img/example-docs-page.jpg
-hero_height: is-large
-hero_darken: true
+hero_height: is-small
+hero_darken: false
+sidebar : true
 image: https://www.csrhymes.com/img/example-docs-page.jpg
 tags: bulma-clean-theme jekyll docs
 canonical_url: https://www.csrhymes.com/2020/05/08/creating-a-docs-site-with-bulma-clean-theme.html
