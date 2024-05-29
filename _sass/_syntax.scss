@@ -112,24 +112,15 @@
   position: absolute;
   top: 5px;
   right: 5px;
-  z-index: 1;
-}
-
-/* Change button to Bulma success */
-.copy-code-button.is-success {
-  background-color: #23d160;
-}
-
-.copy-code-button.is-success .text {
-  color: black;
 }
 
 /* Toast styles */
 .toast {
-  position: absolute;
-  top: calc(100% + 10px); /* Position below the code header */
-  right: 0;
-  z-index: 1;
+  position: fixed;
+  bottom: 20px; /* Adjust distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
   display: none;
 }
 
@@ -140,3 +131,4 @@
   border-radius: 5px;
   padding: 10px;
 }
+

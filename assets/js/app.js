@@ -14,7 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
             copyButton.querySelector('.icon').innerHTML = '<i class="fas fa-check"></i>';
             copyButton.querySelector('.text').textContent = 'Copied';
             showCopiedToast(); // Show success toast
-            setTimeout(hideCopiedToast, 3000); // Hide toast after 3 seconds
+            setTimeout(hideCopiedToast, 2000); // Hide toast after 2 seconds
+            setTimeout(() => {
+              // Reset button state
+              copyButton.classList.remove('is-success');
+              copyButton.querySelector('.icon').innerHTML = '<i class="fas fa-copy"></i>';
+              copyButton.querySelector('.text').textContent = 'Copy';
+            }, 2000); // Reset button state after 3 seconds
           })
           .catch(err => {
             console.error('Failed to copy code: ', err);
@@ -33,3 +39,4 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.style.display = 'none';
   }
   
+

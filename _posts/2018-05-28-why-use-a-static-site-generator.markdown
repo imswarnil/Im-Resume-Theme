@@ -62,3 +62,9 @@ Suspendisse potenti. Nunc scelerisque bibendum metus, sed sodales purus interdum
 Vivamus fermentum tincidunt augue, eget dignissim lorem tincidunt nec. Mauris ut dui sit amet justo ultricies commodo.
 
 ![Placeholder Image](https://via.placeholder.com/600x400)
+{% include utility/codeHeader.html %}
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
