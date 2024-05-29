@@ -1,5 +1,7 @@
 - name: Docs
   link: /docs/
+- name: About 
+  link: /about/
 - name: Example Pages
   link: /#
   dropdown:
