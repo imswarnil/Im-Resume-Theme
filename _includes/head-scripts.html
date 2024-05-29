@@ -1,1 +1,8 @@
 <!-- head scripts -->
+{% if site.adsense %}
+    <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.ad_publisher_id }}"
+        crossorigin="anonymous"
+    ></script>
+{% endif %}
