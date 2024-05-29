@@ -5,6 +5,7 @@ layout: base
 sidebar : false
 ---
 
+
 <section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
@@ -66,4 +67,18 @@ sidebar : false
     </div>
   </div>
 </section>
+
+
+<div class="container">
+  <div class="box">
+    <!-- Leaderboard (980 x 90) -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;height:60px;width:auto;max-width:90px;"
+         data-ad-client="ca-pub-1291242080282540"
+         data-ad-slot="8539588233"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+</div>
 
