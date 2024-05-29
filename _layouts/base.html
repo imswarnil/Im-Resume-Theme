@@ -20,22 +20,6 @@
             {% include cookie-banner.html %}
         {% endif %}
         {% include header.html %}
-        <div class="container">
-            {% include ad/dummy.html type="leaderboard" %}
-        </div>
-
-        <div class="container">
-            {% include ad/adsense.html type="square" %}
-        </div>
-
-        <div class="container">
-            {% include ad/adsense.html type="skyscraper" %}
-        </div>
-
-        <div class="container">
-            {% include ad/adsense.html type="top-leaderboard" %}
-        </div>
-
         <section class="section">
             <div class="container">
                 <div class="columns is-multiline">
@@ -51,11 +35,6 @@
             </div>
         </section>
 
-        <section class="section">
-            <div class="container">
-                {{ content }}
-            </div>
-        </section>
         {% include footer.html %}
         <script src="{{ site.baseurl }}/assets/js/app.js" type="text/javascript"></script>
         {%- include footer-scripts.html -%}
