@@ -11,3 +11,4 @@ group :jekyll_plugins do
     gem 'jekyll-sass-converter'
 end
 
+gem 'wdm', '>= 0.1.0'

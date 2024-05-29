@@ -5,6 +5,7 @@ layout: default
 
 <div class="columns is-multiline">
     <div class="column is-12">
+        {% include ad/adsense.html type="top-leaderboard" %}
         {% include pagination.html %}
     </div>
     {% for post in paginator.posts %}
