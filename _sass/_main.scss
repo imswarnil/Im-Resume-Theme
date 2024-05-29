@@ -3,6 +3,8 @@
 
 @import "custom";
 @import "syntax";
+@import "override";
+
 // Import Bulma and its components
 @import "../node_modules/bulma/sass/utilities";
 @import "../node_modules/bulma/sass/themes";
@@ -15,6 +17,15 @@
 @import "../node_modules/bulma/sass/base/skeleton";
 @import "../node_modules/bulma/sass/helpers";
 
+// Import Bulma and its components
+@import "../_sass/extensions/switch";
+
+// Bulma Extension Created by Swarnil
+@import "../_sass/extensions/sticky";
+
+
+
 html {
   scroll-behavior: smooth;
 }
+

@@ -9,6 +9,7 @@
     "author": "chrisrhymes",
     "license": "MIT",
     "dependencies": {
-        "bulma": "^1.0.0"
+        "bulma": "^1.0.0",
+        "bulma-extensions": "^6.2.7"
     }
 }

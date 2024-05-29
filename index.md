@@ -4,7 +4,13 @@ subtitle: This is the demo site for Bulma Clean Theme
 layout: base    
 show_sidebar: false
 ---
+ <section class="section">
+    <div class="container">
+      <h1 class="title is-1">Typewriter Effect</h1>
+      <p class="subtitle mt-5"> Bhai Kaise Ho <span class=" typewriter" data-text="Hello, this is a typewriter effect!" data-speed="100" data-loop="false"> </span></p>
 
+    </div>
+  </section>
 <section class="hero is-primary is-medium is-bold">
   <div class="hero-body">
     <div class="container is-fluid">

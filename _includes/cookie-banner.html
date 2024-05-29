@@ -1,20 +1,19 @@
 <div class="">
-    <script
-        src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 
-    <div class="container py-6 px-4" id="cookieBanner">
-        <div class="columns">
-            <div class="column is-fullwidth ">
+    <div class="container" id="cookieBanner" style="display: block;">
+        <div class="columns is-vcentered">
+            <div class="column">
                 <div class="content">
                     <p>We use cookies on this site to enhance your user experience</p>
                     <p>
                         By clicking the Accept button, you agree to us doing so.
-                        <a href="{{ site.cookie_policy | relative_url }}">More info on our cookie policy</a>
+                        <a href="/cookie-policy/">More info on our cookie policy</a>
                     </p>
                 </div>
-
-                <div class="buttons mt-4">
+            </div>
+            <div class="column is-narrow">
+                <div class="buttons">
                     <button class="button is-primary" onclick="acceptCookies()">Accept all cookies</button>
                     <button class="button is-primary" onclick="rejectCookies()">Reject all cookies</button>
                 </div>
@@ -24,11 +23,8 @@
 
     <script>
         function acceptCookies() {
-            {% if site.google_analytics %}
-                consentGrantedAdStorage();
-            {% endif %}
             Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
-            Cookies.set('cookiesAccepted', 'true', {expires: 7, path: '/'});
+            Cookies.set('cookiesAccepted', 'true', { expires: 7, path: '/' });
             toggleCookieBanner();
         }
 
@@ -50,4 +46,33 @@
 
         toggleCookieBanner();
     </script>
+
+    <style>
+        #cookieBanner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            max-width: 100%;
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 15px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        #cookieBanner .content {
+            margin: 0;
+            padding: 0;
+        }
+        #cookieBanner .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        #cookieBanner .button {
+            margin: 0;
+        }
+    </style>
 </div>

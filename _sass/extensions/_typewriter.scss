@@ -1,0 +1,31 @@
+// typewriter.scss
+
+@import "../../node_modules/bulma/bulma";
+
+$typewriter-caret-color: #000;
+$typewriter-font-size: 1.5rem;
+$typewriter-line-height: 1.2;
+$typewriter-font-family: "Courier New", Courier, monospace;
+
+.typewriter {
+  display: inline-block;
+  font-size: $typewriter-font-size;
+  line-height: $typewriter-line-height;
+  font-family: $typewriter-font-family;
+
+  &::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    color: $typewriter-caret-color;
+    margin-left: 2px;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
