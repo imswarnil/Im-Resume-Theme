@@ -1,16 +1,12 @@
 navbar:
   - name: Home
     link: /
-    icon: fa-home
   - name: Docs
     link: /docs/
-    icon: fa-book
   - name: About 
     link: /about/
-    icon: fa-user
   - name: Example Pages
     link: /#
-    icon: fa-file-alt
     dropdown:
       - name: Landing Page With Callouts
         link: /landing/
@@ -44,3 +40,6 @@ social_media:
     link: https://facebook.com/imswarni
   - name: Instagram
     link: https://instagram.com/imswarni
+  - name: youtube
+    link: https://twitter.com/imswarni
+  - name: github

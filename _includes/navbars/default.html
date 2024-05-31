@@ -29,7 +29,7 @@
             </a>
         </div>
         <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
-            <div class="navbar-end">
+            <div class="navbar-start">
                 <!-- Align items to the left -->
                 {% for item in site.data.navigation.navbar %}
                     {% if item.dropdown %}
@@ -60,7 +60,10 @@
                             </div>
                         </div>
                     {% else %}
-                        <a href="{{ item.link | relative_url }}" class="navbar-item">
+                        <a
+                            href="{{ item.link | relative_url }}"
+                            class="navbar-item {% if page.url == item.link %}has-text-primary{% endif %}"
+                        >
                             {% if item.image %}
                                 <img src="{{ item.image }}" alt="{{ item.name }}" class="navbar-icon mr-2">
                             {% elsif item.icon %}
@@ -71,17 +74,56 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <div
-                class="navbar-end is-justify-content-center is-inline-flex is-vcentered"
-            >
-                <!-- Social Media Links -->
-                {% if site.data.navigation.social_media %}
-                    {% for item in site.data.navigation.social_media %}
-                        <a class="navbar-item" href="{{ item.link }}" target="_blank">
-                            <span class="icon"><i class="fab fa-{{ item.name|downcase }}"></i></span>
-                        </a>
-                    {% endfor %}
-                {% endif %}
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="/links">
+                    <div class="is-inline-flex ml-3">
+                        <figure class="image mr-3">
+                            <img
+                                class="is-rounded"
+                                src="https://media.licdn.com/dms/image/C4D03AQFca5hj01AGyQ/profile-displayphoto-shrink_400_400/0/1618316980930?e=2147483647&v=beta&t=fj1ON6eOholAtt7mZ42kuf7Nu8_ctyEQ2aSIGIR6fJE"
+                            >
+                        </figure>
+                        <div class="content">
+                            <p><strong>John Smith</strong></p>
+                        </div>
+                    </div>
+                </a>
+                <div class="navbar-dropdown">
+                    <div class="navbar-item">
+                        <p class="dropdown-header">Profile</p>
+                        <a href="#" class="navbar-item">About Me</a>
+                        <a href="#" class="navbar-item">My Education</a>
+                    </div>
+                    {% if site.navbar_author %}
+                        <div class="navbar-item">
+                            <p class="dropdown-header">Author Links</p>
+                            <!-- Social Media Links -->
+                            {% if site.data.navigation.social_media %}
+                                {% for item in site.data.navigation.social_media %}
+                                    <a class="navbar-item" href="{{ item.link }}" target="_blank">
+                                        <span class="icon"><i class="fab fa-{{ item.name|downcase }}"></i></span>
+                                        {{ item.name }}
+                                    </a>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                    <div class="navbar-footer">
+                        <hr class="navbar-divider">
+                        <div
+                            class="navbar-end is-justify-content-center is-inline-flex is-vcentered"
+                        >
+                            <!-- Social Media Links -->
+                            {% if site.data.navigation.social_media %}
+                                {% for item in site.data.navigation.social_media %}
+                                    <a class="navbar-item" href="{{ item.link }}" target="_blank">
+                                        <span class="icon"><i class="fab fa-{{ item.name|downcase }}"></i></span>
+                                    </a>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

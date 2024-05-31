@@ -82,3 +82,4 @@ sidebar : false
   </div>
 </div>
 
+<div class="box is-bordered is-medium"></div>
