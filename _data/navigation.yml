@@ -30,16 +30,7 @@ navbar:
     link: /blog/
     icon: fa-blog
 
-show_github_star: true
-github_star_url: "https://github.com/imswarnil/imswarnil"
 
 social_media:
-  - name: Twitter
-    link: https://twitter.com/imswarni
-  - name: Facebook
-    link: https://facebook.com/imswarni
-  - name: Instagram
-    link: https://instagram.com/imswarni
   - name: youtube
-    link: https://twitter.com/imswarni
-  - name: github
+    link: https://youtube.com/@swarnil
