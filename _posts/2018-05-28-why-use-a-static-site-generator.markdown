@@ -6,15 +6,32 @@ image: "https://via.placeholder.com/600x400"
 permalink : /post
 sidebar : true
 ---
-{% include utility/codeHeader.html %}
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
 ```
+
+{% highlight json %}
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+{% endhighlight %}
+
+## This is Heading
+
+```javascript
 function test() {
   console.log("notice the blank line before this function?");
 }
 ```
 
-{% include utility/codeHeader.html %}
-```
+{% highlight javascript %}
 fun test() {
     println("notice the blank line before this function?")
 }
@@ -45,6 +62,17 @@ class Greeter(private val name: String) {
         println("Hello, $name")
     }
 }
+{% endhighlight %}
+
+```
+fun test() {
+    println("notice the blank line before this function?")
+}
+
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
 ```
 # Welcome to My First Post
 
@@ -62,7 +90,7 @@ Suspendisse potenti. Nunc scelerisque bibendum metus, sed sodales purus interdum
 Vivamus fermentum tincidunt augue, eget dignissim lorem tincidunt nec. Mauris ut dui sit amet justo ultricies commodo.
 
 ![Placeholder Image](https://via.placeholder.com/600x400)
-{% include utility/codeHeader.html %}
+
 ```
 function test() {
   console.log("notice the blank line before this function?");

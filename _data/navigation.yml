@@ -1,21 +1,46 @@
-- name: Docs
-  link: /docs/
-- name: About 
-  link: /about/
-- name: Example Pages
-  link: /#
-  dropdown:
-    - name: Landing Page With Callouts
-      link: /landing/
-    - name: Sponsors Page
-      link: /sponsors/
-    - name: Image Gallery
-      link: /gallery/
-    - name: Products
-      link: /products/
-    - name: Recipe Page
-      link: /example-recipe/
-    - name: Showcase
-      link: /showcase/
-- name: Blog
-  link: /blog/
+navbar:
+  - name: Home
+    link: /
+    icon: fa-home
+  - name: Docs
+    link: /docs/
+    icon: fa-book
+  - name: About 
+    link: /about/
+    icon: fa-user
+  - name: Example Pages
+    link: /#
+    icon: fa-file-alt
+    dropdown:
+      - name: Landing Page With Callouts
+        link: /landing/
+        icon: fa-rocket
+      - name: Sponsors Page
+        link: /sponsors/
+        icon: fa-hand-holding-heart
+      - name: Image Gallery
+        link: /gallery/
+        icon: fa-images
+      - name: Products
+        link: /products/
+        icon: fa-box-open
+      - name: Recipe Page
+        link: /example-recipe/
+        image : https://yt3.googleusercontent.com/bUPnDYABdzOveHZUSC-0745utTub-SQ76iuOjvYVUEeQrsA1fBMTgXbAsZ1SigmXd6BbtkqnwA=s900-c-k-c0x00ffffff-no-rj
+      - name: Showcase
+        link: /showcase/
+        icon: fa-star
+  - name: Blog
+    link: /blog/
+    icon: fa-blog
+
+show_github_star: true
+github_star_url: "https://github.com/imswarnil/imswarnil"
+
+social_media:
+  - name: Twitter
+    link: https://twitter.com/imswarni
+  - name: Facebook
+    link: https://facebook.com/imswarni
+  - name: Instagram
+    link: https://instagram.com/imswarni
