@@ -24,7 +24,7 @@
                 <span aria-hidden="true"></span>
             </a>
             <!-- Search Icon -->
-            <a href="https://www.google.com/" class="navbar-item is-hidden-desktop" style="color: #00d1b2;">
+            <a href="/search" class="navbar-item is-hidden-desktop" style="color: #00d1b2;">
                 <span class="icon is-medium"><i class="fas fa-search"></i></span>
             </a>
         </div>
@@ -71,14 +71,9 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <div class="navbar-end is-justify-content-center">
-                <!-- GitHub Star -->
-                {% if site.data.navigation.show_github_star %}
-                    <a class="navbar-item" href="{{ site.data.navigation.github_star_url }}" target="_blank">
-                        <span class="icon"><i class="fab fa-github"></i></span>
-                    </a>
-                {% endif %}
-
+            <div
+                class="navbar-end is-justify-content-center is-inline-flex is-vcentered"
+            >
                 <!-- Social Media Links -->
                 {% if site.data.navigation.social_media %}
                     {% for item in site.data.navigation.social_media %}

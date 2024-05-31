@@ -29,7 +29,7 @@ disqus:
 # _Adsense Ads
 # config.yml
 adsense: true
-data-ad-client: "ca-pub-1291242080282540"
+data-ad-client: ca-pub-1291242080282540
 
 plugins:
   - jekyll-sitemap
