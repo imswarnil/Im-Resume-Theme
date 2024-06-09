@@ -22,14 +22,10 @@
     {% include head.html %}
     <body>
         {% include header.html %}
-
-        {% include ad/adsense.html type="top-leaderboard" %}
-
         {% unless page.hide_hero %}
             {% include hero/ad.html %}
         {% endunless %}
         {% include callouts.html %}
-
         <section class="section">
             <div class="container">
                 <div class="columns is-multiline">

@@ -1,12 +1,20 @@
 navbar:
   - name: Home
     link: /
-  - name: Docs
-    link: /docs/
-    icon: fa-file
+    icon: fa-house-user
   - name: About 
     link: /about/
-  - name: Example Pages
+    icon: fa-address-card
+  - name: Blog
+    link: /blog/
+    icon: fa-pen
+  - name: Videos
+    link: /videos/
+    icon: fa-play
+  - name: Contact Me
+    link: /contact/
+    icon: fa-phone
+  - name: More
     link: /#
     dropdown:
       - name: Landing Page With Callouts
@@ -27,9 +35,7 @@ navbar:
       - name: Showcase
         link: /showcase/
         icon: fa-star
-  - name: Blog
-    link: /blog/
-    icon: fa-blog
+
 
 
 social_media:

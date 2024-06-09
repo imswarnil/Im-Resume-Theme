@@ -67,3 +67,70 @@ sidebar : false
     </div>
   </div>
 </section>
+
+<section class="section mt-5">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-9">
+                <h2 class="title">Recent Videos</h2>
+                <p>Discover more of our video content and tutorials.</p>
+            </div>
+            <div class="column is-3">
+                <a href="/videos" class="button is-primary is-fullwidth">
+                    <span class="mr-2 icon">
+                        <i class="fas fa-video"></i>
+                    </span>
+                    Explore All Videos
+                </a>
+            </div>
+        </div>
+        <div class="columns is-multiline">
+            {% assign sorted_videos = site.videos | sort: 'date' | reversed %}
+            {% for video in sorted_videos limit:3 %}
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="{{ video.url }}"><img src="https://img.youtube.com/vi/{{ video.video_url | split:'=' | last }}/hqdefault.jpg" alt="{{ video.title }}"></a>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">{{ video.title }}</p>
+                            <p class="subtitle is-6">{{ video.description }}</p>
+                            <div class="is-flex is-vcentered mt-3">
+                                <span class="icon is-small">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                <p class="is-size-7 ml-1">{{ video.video_duration }}</p>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <p class="card-footer-item">
+                                <a href="{{ video.url }}" class="has-text-primary">
+                                    <span class="icon">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                    <span>Watch Video</span>
+                                </a>
+                            </p>
+                        </footer>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="section mt-5 has-background-primary is-halfrounded">
+    <div class="box has-text-centered">
+        <h2 class="title has-text-white">Subscribe to Our Newsletter</h2>
+        <p class="subtitle has-text-white">Stay updated with our latest news and updates by subscribing to our newsletter.</p>
+        <form action="#" method="post">
+            <div class="field has-addons is-centered">
+                <div class="control is-expanded">
+                    <input class="input is-rounded" type="email" placeholder="Enter your email">
+                </div>
+                <div class="control">
+                    <button class="button is-white is-rounded" type="submit">Subscribe</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

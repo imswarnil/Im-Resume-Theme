@@ -2,7 +2,8 @@
 layout: page
 title: About
 permalink: /about/
-sidebar : true
+sidebar : false
+menubar_toc : true
 ---
 
 ## Start
