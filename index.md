@@ -1,16 +1,15 @@
 ---
 title: Im Swarnil Theme
 subtitle: This is the demo site for Bulma Clean Theme
-layout: base    
+layout: home    
 sidebar : false
 ---
 
-
-<section class="hero is-primary">
+<section class="hero">
   <div class="hero-body">
     <div class="container">
      <!-- Right Side with Image Placeholder -->
-      <div class="columns is-vcentered">
+      <div class="columns is-vcentered is-centered">
       <div class="column is-3">
           <figure class="image is-512x512 is-skeleton">
           <img alt="Placeholder" src="https://placehold.co/128x128">
@@ -27,7 +26,8 @@ sidebar : false
             <a class="button is-primary is-outlined">Contact</a>
           </div>
         </div>
-   <div class="column is-3">
+
+<div class="column is-3">
     <div class="button-options">
   <div class="columns is-mobile">
     <div class="column">
@@ -67,19 +67,3 @@ sidebar : false
     </div>
   </div>
 </section>
-
-
-<div class="container">
-  <div class="box">
-    <!-- Leaderboard (980 x 90) -->
-    <ins class="adsbygoogle"
-         style="display:inline-block;height:60px;width:auto;max-width:90px;"
-         data-ad-client="ca-pub-1291242080282540"
-         data-ad-slot="8539588233"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-</div>
-
-<div class="box is-bordered is-medium"></div>

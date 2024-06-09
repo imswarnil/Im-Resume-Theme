@@ -1,6 +1,8 @@
 # Site Settings
 lang: en
-title: Trailblazer Jekyll Theme
+title: Imswarnil
+title_1 : Im
+title_2 : Swarnil
 tagline: Clean, Simple, Minimalistic & Multipurpose Theme Made Using Bulma For Jekyll
 logo_url: /assets/logo/imswarnil.png
 email: your-email@domain.com
@@ -18,6 +20,9 @@ gh_sponsor: chrisrhymes
 
 paginate: 5 
 paginate_path: "/blog/page:num"
+
+primary_color: "#E53935"
+custom_theme: false
 
 # Disqus Comments
 disqus:

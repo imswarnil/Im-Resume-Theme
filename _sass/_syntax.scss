@@ -17,6 +17,8 @@ $syntax-deleted-bg: hsl(0, 100%, 90%);
 $syntax-inserted-bg: hsl(141, 53%, 85%);
 $syntax-inserted-color: hsl(141, 53%, 30%);
 
+@import "../node_modules/bulma/sass/utilities/initial-variables.scss";
+
 .highlight
 {
   margin: 20px 0;

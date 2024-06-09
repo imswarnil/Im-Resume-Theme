@@ -3,6 +3,7 @@ navbar:
     link: /
   - name: Docs
     link: /docs/
+    icon: fa-file
   - name: About 
     link: /about/
   - name: Example Pages

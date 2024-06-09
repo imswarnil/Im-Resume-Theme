@@ -1,35 +1,12 @@
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-@import "custom";
-@import "syntax";
+// Import Bulma
+@import "../node_modules/bulma/sass/index";
 
-// Import Bulma and its components
-@import "../node_modules/bulma/sass/utilities";
-@import "../node_modules/bulma/sass/themes";
-@import "../node_modules/bulma/sass/base";
-@import "../node_modules/bulma/sass/elements";
-@import "../node_modules/bulma/sass/form";
-@import "../node_modules/bulma/sass/components";
-@import "../node_modules/bulma/sass/grid";
-@import "../node_modules/bulma/sass/layout";
-@import "../node_modules/bulma/sass/base/skeleton";
-@import "../node_modules/bulma/sass/helpers";
-
-// Override Bulma scss
-
-@import "override";
-
-// Import Bulma and its components
+// Import custom Bulma extensions
 @import "../_sass/extensions/switch";
-
-// Bulma Extension Created by Swarnil
 @import "../_sass/extensions/sticky";
-@import "../_sass/extensions/blockquotes";
-@import "../_sass/extensions/border";
 
-
+// Custom styles and overrides
 html {
   scroll-behavior: smooth;
 }
-
