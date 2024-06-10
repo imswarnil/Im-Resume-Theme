@@ -4,28 +4,45 @@ layout: base
 <div class="container">
     <div class="section">
         <div class="content">
-            <h1 class="title">{{ page.title }}</h1>
-            <p class="subtitle">{{ page.description }}</p>
-            <div class="columns is-multiline">
+            <h1 class="title is-2 mb-2">{{ page.title }}</h1>
+            <p class="subtitle is-5 mb-5">{{ page.description }}</p>
+            <div class="columns mt-5 ">
                 <div class="column is-9">
                     {% if page.video_source == 'YouTube' %}
                         <div class="video-container">
-                            <iframe
-                                width="560"
-                                height="315"
-                                src="{{ page.video_url | replace: 'watch?v=', 'embed/' }}"
-                                frameborder="0"
-                                allowfullscreen
-                            ></iframe>
+                            <figure class="image is-16by9">
+                                <iframe
+                                    class="has-ratio"
+                                    src="https://www.youtube.com/embed/{{ page.video_id }}?rel=0&amp;autoplay=0"
+                                    frameborder="0"
+                                    allowfullscreen
+                                ></iframe>
+                            </figure>
                         </div>
                     {% else %}
                         <div class="video-container">
-                            <video width="560" height="315" controls>
+                            <video controls width="100%">
                                 <source src="{{ page.video_url }}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                     {% endif %}
+                    <script type="application/ld+json">
+                        {
+                            "@context": "http://schema.org",
+                            "@type": "VideoObject",
+                            "name": "{{ page.title }}",
+                            "description": "{{ page.description }}",
+                            "duration": "{{ page.video_duration }}",
+                            "thumbnailUrl": "https://img.youtube.com/vi/{{ page.video_id }}/maxresdefault.jpg",
+                            "embedUrl": "https://www.youtube.com/embed/{{ page.video_id }}",
+                            "uploadDate": "{{ page.date }}",
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Your Organization"
+                            }
+                        }
+                    </script>
                 </div>
                 <div class="column is-3 is-12-mobile">
                     <aside class="menu widget">
@@ -34,31 +51,35 @@ layout: base
                             {% for ts in page.timestamps %}
                                 <li style="list-style:none;">
                                     <a href="#" class="has-text-black">
+                                        <span class="icon"> <i class="fas fa-clock has-text-primary"></i> </span>
                                         <span>
                                             {{- ts.time }}
-                                            <span class="icon"> <i class="fas fa-clock has-text-primary"></i> </span
-                                        ></span>
+                                        </span>
                                         -
-                                        <span>{{ ts.title }}</span>
+                                        <span class="has-text-weight-medium ">{{ ts.title }}</span>
                                     </a>
                                 </li>
                             {% endfor %}
                         </ul>
                     </aside>
 
-                    <!-- Bulma container for centering -->
-                    <div class="container is-centered">
-                        <!-- Your Bulma-centered content goes here -->
-                        {% include ad/adsense.html type="square" %}
-                    </div>
+                    <!-- Include Adsense -->
+                    {% include ad/adsense.html type="square" %}
                 </div>
+            </div>
+
+            <div class="container is-centered">
+                {% include ad/adsense.html type="small-leaderboard" %}
             </div>
 
             <div class="columns is-multiline">
                 <div class="column is-9">
                     {{ content }}
+                    <div class="my-4">
+                        {% include disqus.html %}
+                    </div>
                 </div>
-                <div class="column is-3">
+                <div class="column is-3 mt-5">
                     <aside class="widget">
                         <h2 class="title is-5">My Other Videos</h2>
                         <div class="video-list">
@@ -67,7 +88,7 @@ layout: base
                                     <div class="column">
                                         <figure class="image is-16by9">
                                             <img
-                                                src="https://img.youtube.com/vi/{{ video.video_url | remove: 'https://www.youtube.com/watch?v=' }}/maxresdefault.jpg"
+                                                src="https://img.youtube.com/vi/{{ video.video_id }}/maxresdefault.jpg"
                                                 alt="{{ video.title }}"
                                                 class="video-thumbnail"
                                             >
@@ -82,27 +103,4 @@ layout: base
             </div>
         </div>
     </div>
-</div>
-
-<style>
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        background: #000;
-    }
-
-    .video-container iframe,
-    .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-</style>
-<div class="my-4">
-    {% include disqus.html %}
 </div>
