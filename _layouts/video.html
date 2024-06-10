@@ -66,16 +66,6 @@ layout: base
 
                     <!-- Include Adsense -->
                     {% include ad/adsense.html type="square" %}
-
-                    <!-- Video Creation Details -->
-                    <div class="creation-details mt-5">
-                        <h2 class="title is-5">Video Creation Details</h2>
-                        <ul>
-                            {% for detail in page.video_creation_details %}
-                                <li>{{ detail }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
                 </div>
             </div>
 
@@ -156,12 +146,36 @@ layout: base
                         {% include disqus.html %}
                     </div>
                 </div>
-                <div class="column is-3 mt-5">
+
+                <div class="column is-3 mt-5 is-centered">
+                    <aside class="widget my-5">
+                        <h2 class="title is-5">Products I Use</h2>
+                        <div class="box">
+                            {% for product in site.products %}
+                                <div class="columns is-vcentered my-1">
+                                    <div class="column is-narrow">
+                                        <img
+                                            src="{{ product.image }}"
+                                            alt="{{ product.title }}"
+                                            class="image is-48x48"
+                                        >
+                                    </div>
+                                    <div class="column">
+                                        <p class="title is-6">{{ product.title }}</p>
+                                        <p class="subtitle is-7">{{ product.subtitle }}</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </aside>
+
+                    {% include ad/adsense.html type="square" %}
+
                     <aside class="widget">
                         <h2 class="title is-5">My Other Videos</h2>
                         <div class="video-list">
                             {% for video in site.videos limit: 3 %}
-                                <a href="{{ video.url }}" class="video-link">
+                                <a href="{{ video.url }}" class="my-2">
                                     <div class="column">
                                         <figure class="image is-16by9">
                                             <img
@@ -171,6 +185,7 @@ layout: base
                                             >
                                         </figure>
                                         <p class="title is-5 mt-2">{{ video.title }}</p>
+                                        <p class="subtitle is-7 mt-1">{{ video.description }}</p>
                                     </div>
                                 </a>
                             {% endfor %}

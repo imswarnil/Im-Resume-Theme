@@ -90,10 +90,10 @@ sidebar : false
                 <div class="column is-3">
                     <div class="card">
                         <div class="card-image">
-                            <a href="{{ video.url }}"><img src="https://img.youtube.com/vi/{{ video.video_url | split:'=' | last }}/hqdefault.jpg" alt="{{ video.title }}"></a>
+                            <a href="{{ video.url }}"><img style="" src="https://img.youtube.com/vi/{{ video.video_id | split:'=' | last }}/maxresdefault.jpg" alt="{{ video.title }}"></a>
                         </div>
                         <div class="card-content">
-                            <p class="title is-4">{{ video.title }}</p>
+                            <a href="{{ video.url }}" class="title is-4">{{ video.title }}</a>
                             <p class="subtitle is-6">{{ video.description }}</p>
                             <div class="is-flex is-vcentered mt-3">
                                 <span class="icon is-small">
