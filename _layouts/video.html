@@ -6,7 +6,7 @@ layout: base
         <div class="content">
             <h1 class="title is-2 mb-2">{{ page.title }}</h1>
             <p class="subtitle is-5 mb-5">{{ page.description }}</p>
-            <div class="columns mt-5 ">
+            <div class="columns mt-5">
                 <div class="column is-9">
                     {% if page.video_source == 'YouTube' %}
                         <div class="video-container">
@@ -43,6 +43,7 @@ layout: base
                             }
                         }
                     </script>
+                    <!-- FAQs Section -->
                 </div>
                 <div class="column is-3 is-12-mobile">
                     <aside class="menu widget">
@@ -65,6 +66,16 @@ layout: base
 
                     <!-- Include Adsense -->
                     {% include ad/adsense.html type="square" %}
+
+                    <!-- Video Creation Details -->
+                    <div class="creation-details mt-5">
+                        <h2 class="title is-5">Video Creation Details</h2>
+                        <ul>
+                            {% for detail in page.video_creation_details %}
+                                <li>{{ detail }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -75,6 +86,72 @@ layout: base
             <div class="columns is-multiline">
                 <div class="column is-9">
                     {{ content }}
+                    <div class="section">
+                        <div class="container">
+                            <h2 class="title is-3 ">FAQs Of This Video</h2>
+                            <div class="columns is-centered">
+                                <div class="column is-12">
+                                    {% if page.faqs %}
+                                        {% for faq in page.faqs %}
+                                            <div class="box mb-5">
+                                                <article class="media">
+                                                    <figure class="media-left">
+                                                        <span class="icon is-medium">
+                                                            <i class="fas fa-question-circle"></i>
+                                                        </span>
+                                                    </figure>
+                                                    <div class="media-content">
+                                                        <div class="content">
+                                                            <p>
+                                                                <strong>{{ faq.question }}</strong>
+                                                                <br>
+                                                                {{ faq.answer }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        {% endfor %}
+                                    {% else %}
+                                        <p>No FAQs available for this video.</p>
+                                    {% endif %}
+                                    <div class="has-text-centered">
+                                        <button class="button is-primary">Ask Me Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Best Comment Section -->
+                    <div class="best-comment-section mt-5 p-5">
+                        <h2 class="title is-2 has-text-centered">
+                            Best Comment
+                            <span class="icon is-large has-text-primary">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </h2>
+                        <div class="columns is-centered">
+                            <div class="column is-three-quarters">
+                                <div class="box has-background-primary has-text-centered">
+                                    {% if page.best_comment %}
+                                        <div class="best-comment p-5">
+                                            <div class="comment-details ">
+                                                <p class="title is-3 has-text-light">{{ page.best_comment }}</p>
+                                                <div class="comment-author">
+                                                    <span class="has-text-light">- User123</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <p class="subtitle is-5 has-text-light">
+                                            No comments available for this video.
+                                        </p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="my-4">
                         {% include disqus.html %}
                     </div>

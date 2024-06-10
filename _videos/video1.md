@@ -21,10 +21,10 @@ timestamps:
     title: Main Topic 2
   - time: "08:20"
     title: Conclusion
-seo:
-  meta_title: Sample Video Tutorial | Learn [Your Topic] | Dummy Company
-  meta_description: Watch this sample video tutorial to learn [Your Topic]. Get started with Dummy Company's expert guidance. Perfect for beginners.
-  meta_keywords: sample video, tutorial, [Your Topic], Dummy Company, beginner tutorial, learning video
+faqs:
+  - question: "How can I download this video?"
+    answer: "You can use a third-party tool or website to download YouTube videos. However, please respect the copyright of the video creator."
+  - question: "What software did you use to edit this video?"
+    answer: "This video was edited using Adobe Premiere Pro."
+best_comment: "This video was incredibly helpful! Thank you for sharing such valuable information."
 ---
-
-Lorem ipsum
