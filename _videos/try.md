@@ -1,6 +1,6 @@
 ---
 layout: video
-title: Sample Video
+title: Try Video
 description: This is a sample video for demonstration purposes.
 date: 2024-05-23
 video_source: YouTube
