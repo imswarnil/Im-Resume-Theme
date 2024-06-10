@@ -80,39 +80,6 @@
                 </div>
             </div>
         </section>
-        <div class="container">
-            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                {% if paginator.previous_page %}
-                    <a href="{{ paginator.previous_page_path }}" class="pagination-previous">Previous</a>
-                {% else %}
-                    <a class="pagination-previous" disabled>Previous</a>
-                {% endif %}
-                {% if paginator.next_page %}
-                    <a href="{{ paginator.next_page_path }}" class="pagination-next">Next</a>
-                {% else %}
-                    <a class="pagination-next" disabled>Next</a>
-                {% endif %}
-                <ul class="pagination-list">
-                    {% for page in (1..paginator.total_pages) %}
-                        <li>
-                            {% if page == paginator.page %}
-                                <a class="pagination-link is-current" aria-label="Page {{ page }}" aria-current="page">
-                                    {{- page -}}
-                                </a>
-                            {% else %}
-                                <a
-                                    href="{{ paginator.paginate_path | replace: ':num', page }}"
-                                    class="pagination-link"
-                                    aria-label="Goto page {{ page }}"
-                                >
-                                    {{- page -}}
-                                </a>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        </div>
 
         {% include ad/adsense.html type="top-leaderboard" %}
         {% unless page.hide_footer %}

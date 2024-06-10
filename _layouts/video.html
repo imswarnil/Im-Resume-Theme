@@ -6,53 +6,8 @@ layout: base
         <div class="content">
             <h1 class="title">{{ page.title }}</h1>
             <p class="subtitle">{{ page.description }}</p>
-            <nav class="level">
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Source</p>
-                        <p class="title">{{ page.video_source }}</p>
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Type</p>
-                        <p class="title">{{ page.video_type }}</p>
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Duration</p>
-                        <p class="title">{{ page.video_duration }}</p>
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Category</p>
-                        <p class="title">{{ page.category }}</p>
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Start Time</p>
-                        <p class="title">{{ page.start_time }}</p>
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">End Time</p>
-                        <p class="title">{{ page.end_time }}</p>
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Date</p>
-                        <p class="title">{{ page.date | date: '%B %d, %Y' }}</p>
-                    </div>
-                </div>
-            </nav>
-
             <div class="columns is-multiline">
-                <div class="column is-12">
+                <div class="column is-9">
                     {% if page.video_source == 'YouTube' %}
                         <div class="video-container">
                             <iframe
@@ -72,12 +27,53 @@ layout: base
                         </div>
                     {% endif %}
                 </div>
+                <div class="column is-3 is-12-mobile">
+                    <aside class="menu widget">
+                        <p class="menu-label">Timestamps</p>
+                        <ul class="menu-list">
+                            {% for ts in page.timestamps %}
+                                <li style="list-style:none;">
+                                    <a href="#" class="has-text-black">
+                                        <span>
+                                            {{- ts.time }}
+                                            <span class="icon"> <i class="fas fa-clock has-text-primary"></i> </span
+                                        ></span>
+                                        -
+                                        <span>{{ ts.title }}</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </aside>
+                    {% include ad/adsense.html type="square" %}
+                </div>
             </div>
 
-            <div class="tags">
-                {% for tag in page.tags %}
-                    <span class="tag">{{ tag }}</span>
-                {% endfor %}
+            <div class="columns is-multiline">
+                <div class="column is-9">
+                    {{ content }}
+                </div>
+                <div class="column is-3">
+                    <aside class="widget">
+                        <h2 class="title is-5">My Other Videos</h2>
+                        <div class="video-list">
+                            {% for video in site.videos limit: 3 %}
+                                <a href="{{ video.url }}" class="video-link">
+                                    <div class="column">
+                                        <figure class="image is-16by9">
+                                            <img
+                                                src="https://img.youtube.com/vi/{{ video.video_url | remove: 'https://www.youtube.com/watch?v=' }}/maxresdefault.jpg"
+                                                alt="{{ video.title }}"
+                                                class="video-thumbnail"
+                                            >
+                                        </figure>
+                                        <p class="title is-5 mt-2">{{ video.title }}</p>
+                                    </div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </aside>
+                </div>
             </div>
         </div>
     </div>
