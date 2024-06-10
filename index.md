@@ -118,3 +118,29 @@ sidebar : false
         </div>
     </div>
 </section>
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <h2 class="title is-2 has-text-centered">Subscribe to Our Newsletter</h2>
+                <p class="subtitle has-text-centered">Stay updated with our latest news and updates!</p>
+                <div class="field is-grouped mt-4">
+                    <p class="control is-expanded">
+                        <input class="input " type="text" placeholder="Your Name">
+                    </p>
+                    <p class="control is-expanded">
+                        <input class="input " type="email" placeholder="Your Email">
+                    </p>
+                    <p class="control">
+                        <a class="button is-primary">
+                            <span class="icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </span>
+                            <span>Subscribe</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

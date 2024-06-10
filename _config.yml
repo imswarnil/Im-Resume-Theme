@@ -92,7 +92,7 @@ collections:
     output: true
     layout: video  # Default layout for videos
     thumbnail: https://placehold.co/600x400/E53935/FFF?text=Video+Image+Not+Found  # Default thumbnail for videos
-    permalink: /:collection/:title  # Default permalink structure for videos
+    permalink: /:collection/:name
   products:
     output: true
     layout: product
