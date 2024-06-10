@@ -19,7 +19,6 @@ sidebar : false
         <div class="column is-6 ml-4">
           <p class="is-size-4">Hey, welcome to my blog</p>
           <h1 class="title is-1 ">Hi, I'm Swarnil Singhai</h1>
-
           <p class="is-size-4">I am an engineer and YouTuber.</p>
           <p class="is-size-6 my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh.</p>
           <div class="buttons">

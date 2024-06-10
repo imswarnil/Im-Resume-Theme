@@ -4,19 +4,6 @@ layout: base
 <main class="section">
     <div class="container">
         {{ content }}
-        <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1291242080282540"
-            crossorigin="anonymous"
-        ></script>
-        <!-- Leaderboard (980 x 90) -->
-        <ins
-            class="adsbygoogle"
-            data-ad-client="ca-pub-1291242080282540"
-            data-ad-slot="8539588233"
-        ></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        {% include ad/adsense.html type="top-leaderboard" %}
     </div>
 </main>
