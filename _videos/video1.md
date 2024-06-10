@@ -9,6 +9,7 @@ video_duration: 10:30
 video_url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 start_time: 00:00
 end_time: 10:30
+comments: true
 category: Tutorial
 tags: [sample, tutorial]
 timestamps:

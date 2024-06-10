@@ -45,7 +45,12 @@ layout: base
                             {% endfor %}
                         </ul>
                     </aside>
-                    {% include ad/adsense.html type="square" %}
+
+                    <!-- Bulma container for centering -->
+                    <div class="container is-centered">
+                        <!-- Your Bulma-centered content goes here -->
+                        {% include ad/adsense.html type="square" %}
+                    </div>
                 </div>
             </div>
 
@@ -98,3 +103,6 @@ layout: base
         height: 100%;
     }
 </style>
+<div class="my-4">
+    {% include disqus.html %}
+</div>
