@@ -86,8 +86,8 @@ sidebar : false
         </div>
         <div class="columns is-multiline">
             {% assign sorted_videos = site.videos | sort: 'date' | reversed %}
-            {% for video in sorted_videos limit:3 %}
-                <div class="column is-4">
+            {% for video in sorted_videos limit:4 %}
+                <div class="column is-3">
                     <div class="card">
                         <div class="card-image">
                             <a href="{{ video.url }}"><img src="https://img.youtube.com/vi/{{ video.video_url | split:'=' | last }}/hqdefault.jpg" alt="{{ video.title }}"></a>
@@ -116,21 +116,5 @@ sidebar : false
                 </div>
             {% endfor %}
         </div>
-    </div>
-</section>
-<section class="section mt-5 has-background-primary is-halfrounded">
-    <div class="box has-text-centered">
-        <h2 class="title has-text-white">Subscribe to Our Newsletter</h2>
-        <p class="subtitle has-text-white">Stay updated with our latest news and updates by subscribing to our newsletter.</p>
-        <form action="#" method="post">
-            <div class="field has-addons is-centered">
-                <div class="control is-expanded">
-                    <input class="input is-rounded" type="email" placeholder="Enter your email">
-                </div>
-                <div class="control">
-                    <button class="button is-white is-rounded" type="submit">Subscribe</button>
-                </div>
-            </div>
-        </form>
     </div>
 </section>
