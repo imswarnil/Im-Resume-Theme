@@ -4,88 +4,7 @@ subtitle: This is the demo site for Bulma Clean Theme
 layout: home    
 sidebar : false
 ---
- <section class="section">
-    <div class="container">
-      <div class="columns is-multiline">
-        <div class="column is-half-tablet is-one-quarter-desktop">
-          <div id="about-card" class="card card-hover" onclick="toggleCard('about')">
-            <div class="card-content has-text-centered">
-              <div class="icon-container">
-                <span class="icon is-large">
-                  <i class="fas fa-user icon"></i>
-                </span>
-              </div>
-              <h3 class="title is-4">About Me</h3>
-            </div>
-            <div id="about-content" class="card-content is-hidden">
-              <p>Hi, I'm Jared, a frontend developer with a passion for building beautiful and functional web applications. I have experience with React, Tailwind CSS, and various other web technologies.</p>
-            </div>
-          </div>
-        </div>
-        <div class="column is-half-tablet is-one-quarter-desktop">
-          <div id="portfolio-card" class="card card-hover" onclick="toggleCard('portfolio')">
-            <div class="card-content has-text-centered">
-              <div class="icon-container">
-                <span class="icon is-large">
-                  <i class="fas fa-briefcase icon"></i>
-                </span>
-              </div>
-              <h3 class="title is-4">Portfolio</h3>
-            </div>
-            <div id="portfolio-content" class="card-content is-hidden">
-              <p>Check out my portfolio to see some of the projects I've worked on. From e-commerce websites to web applications, I've got a diverse range of experience.</p>
-            </div>
-          </div>
-        </div>
-        <div class="column is-half-tablet is-one-quarter-desktop">
-          <div id="blog-card" class="card card-hover" onclick="toggleCard('blog')">
-            <div class="card-content has-text-centered">
-              <div class="icon-container">
-                <span class="icon is-large">
-                  <i class="fas fa-newspaper icon"></i>
-                </span>
-              </div>
-              <h3 class="title is-4">Blog</h3>
-            </div>
-            <div id="blog-content" class="card-content is-hidden">
-              <p>Check out my blog for the latest updates, tutorials, and insights on web development. I cover a wide range of topics, from React to Tailwind CSS and beyond.</p>
-            </div>
-          </div>
-        </div>
-        <div class="column is-half-tablet is-one-quarter-desktop">
-          <div id="courses-card" class="card card-hover" onclick="toggleCard('courses')">
-            <div class="card-content has-text-centered">
-              <div class="icon-container">
-                <span class="icon is-large">
-                  <i class="fas fa-book icon"></i>
-                </span>
-              </div>
-              <h3 class="title is-4">Courses</h3>
-            </div>
-            <div id="courses-content" class="card-content is-hidden">
-              <p>Check out my online courses to learn web development from the ground up. I cover everything from HTML and CSS to advanced JavaScript and React.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function toggleCard(cardId) {
-      const card = document.getElementById(`${cardId}-card`);
-      const content = document.getElementById(`${cardId}-content`);
-      const isActive = card.classList.toggle('is-expanded');
-
-      document.querySelectorAll('.card-content.is-hidden').forEach(el => {
-        if (el !== content) {
-          el.classList.add('is-hidden');
-        }
-      });
-
-      content.classList.toggle('is-hidden', !isActive);
-    }
-  </script>
+ 
 <section class="hero">
   <div class="hero-body">
     <div class="container">
@@ -107,47 +26,15 @@ sidebar : false
             <a class="button is-primary is-outlined">Contact</a>
           </div>
         </div>
-
-<div class="column is-3">
-    <div class="button-options">
-  <div class="columns is-mobile">
-    <div class="column">
-      <button class="button is-primary is-light is-fullwidth is-medium">
-        <span class="icon is-small"><i class="fas fa-blog"></i></span>
-        <span>My Blog</span>
-      </button>
-    </div>
-  </div>
-  <div class="columns is-mobile ">
-    <div class="column">
-      <button class="button is-primary is-light is-fullwidth is-medium">
-        <span class="icon is-small"><i class="fas fa-briefcase"></i></span>
-        <span>My Portfolio</span>
-      </button>
-    </div>
-  </div>
-  <div class="columns is-mobile">
-    <div class="column">
-      <button class="button is-primary is-light is-fullwidth is-medium ">
-        <span class="icon is-small"><i class="fas fa-tools"></i></span>
-        <span>My Work</span>
-      </button>
-    </div>
-  </div>
-  <div class="columns is-mobile">
-    <div class="column">
-      <button class="button is-primary is-light is-fullwidth is-medium">
-        <span class="icon is-small"><i class="fas fa-envelope"></i></span>
-        <span>Contact Me</span>
-      </button>
-    </div>
-  </div>
-</div>
-        </div>
       </div>
     </div>
   </div>
 </section>
+
+
+ 
+
+
 
 <section class="section mt-5">
     <div class="container">
