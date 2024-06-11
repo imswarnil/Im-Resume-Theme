@@ -90,7 +90,7 @@ footer_menu: example_footer_menu
 collections:
   videos:
     output: true
-    layout: video  # Default layout for videos
+    layout: video
     thumbnail: https://placehold.co/600x400/E53935/FFF?text=Video+Image+Not+Found  # Default thumbnail for videos
     permalink: /:collection/:name
   products:
@@ -98,5 +98,8 @@ collections:
     layout: product
     image: https://placehold.co/800x600/E53935/FFF  # Default thumbnail for videos
     sidebar: false
+  projects:
+    output: true
+    permalink: /projects/:title
 
 

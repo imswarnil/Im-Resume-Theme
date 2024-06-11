@@ -11,9 +11,6 @@
                 {{ site.title }}
             </a>
             <!-- Search Icon (Desktop) -->
-            <a href="/search" class="navbar-item is-hidden-touch has-text-primary">
-                <span class="icon"><i class="fas fa-xl fa-search"></i></span>
-            </a>
             <a
                 role="button"
                 class="navbar-burger burger"
@@ -82,6 +79,9 @@
             <div
                 class="navbar-end is-justify-content-center is-inline-flex is-vcentered"
             >
+                <a href="/search" class="navbar-item is-hidden-touch has-text-primary">
+                    <span class="icon"><i class="fas fa-xl fa-search"></i></span>
+                </a>
                 <!-- Social Media Links -->
                 {% if site.data.navigation.social_media %}
                     {% for item in site.data.navigation.social_media %}
