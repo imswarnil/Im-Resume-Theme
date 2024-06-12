@@ -33,7 +33,7 @@ disqus:
 
 # _Adsense Ads
 # config.yml
-adsense: true
+adsense: false
 data-ad-client: ca-pub-1291242080282540
 
 plugins:
