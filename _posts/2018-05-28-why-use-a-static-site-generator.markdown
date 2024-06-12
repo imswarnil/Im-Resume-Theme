@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: ad
 title: "My First Post"
 date: 2024-05-22
 image: "https://via.placeholder.com/600x400"
 permalink : /post
-sidebar : true
+sidebar : false
 ---
 
 ```json

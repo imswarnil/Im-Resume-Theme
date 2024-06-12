@@ -1,11 +1,15 @@
 {%- case include.type -%}
     {%- when 'square' -%}
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.data-ad-client }}"
+            crossorigin="anonymous"
+        ></script>
         <!-- Square ( Responsive ) -->
         <style>
             .square {
                 width: auto;
                 height: 250px;
-                margin: 0 auto;
             }
 
             @media (max-width: 799px) {
@@ -23,22 +27,27 @@
             }
         </style>
 
-        <div
-            class="columns is-centered is-vcentered is-paddingless"
-        >
-            <ins
-                class="adsbygoogle  square  is-centered animate-on-scroll"
-                data-ad-client="{{ site.data-ad-client }}"
-                data-ad-slot="7663977887"
-            >
-            </ins>
+        <div class="columns is-centered is-vcentered">
+            <div class="column is-one-third has-text-centered">
+                <ins
+                    class="adsbygoogle square"
+                    data-ad-client="{{ site.data-ad-client }}"
+                    data-ad-slot="7663977887"
+                >
+                </ins>
+            </div>
         </div>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 
     {%- when 'button' -%}
-        <!-- Square ( Responsive ) -->
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.data-ad-client }}"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Button ( Responsive ) -->
         <style>
             .button {
                 width: auto;
@@ -46,16 +55,26 @@
             }
         </style>
 
-        <ins
-            class="adsbygoogle button"
-            data-ad-client="{{ site.data-ad-client }}"
-            data-ad-slot="3836856744"
-        ></ins>
+        <div class="columns is-centered is-vcentered">
+            <div class="column is-narrow has-text-centered">
+                <ins
+                    class="adsbygoogle button"
+                    data-ad-client="{{ site.data-ad-client }}"
+                    data-ad-slot="3836856744"
+                >
+                </ins>
+            </div>
+        </div>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 
     {%- when 'top-leaderboard' -%}
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.data-ad-client }}"
+            crossorigin="anonymous"
+        ></script>
         <style>
             .top-leaderboard {
                 height: 90px;
@@ -68,9 +87,7 @@
                 }
             }
         </style>
-        <div
-            class="container is-centered p-1"
-        >
+        <div class="container has-text-centered">
             <ins
                 class="adsbygoogle top-leaderboard"
                 data-ad-client="{{ site.data-ad-client }}"
@@ -102,21 +119,27 @@
             }
         </style>
 
-        <div
-            class="columns is-centered is-vcentered is-paddingless"
-        >
-            <ins
-                class="adsbygoogle  small-leaderboard  is-centered animate-on-scroll"
-                data-ad-client="{{ site.data-ad-client }}"
-                data-ad-slot="3487917390"
-            >
-            </ins>
+        <div class="columns is-centered is-vcentered">
+            <div class="column is-narrow has-text-centered">
+                <ins
+                    class="adsbygoogle small-leaderboard"
+                    data-ad-client="{{ site.data-ad-client }}"
+                    data-ad-slot="3487917390"
+                >
+                </ins>
+            </div>
         </div>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 
     {%- when 'large-leaderboard' -%}
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.data-ad-client }}"
+            crossorigin="anonymous"
+        ></script>
+
         <style>
             .large-leaderboard {
                 width: auto;
@@ -138,21 +161,26 @@
             }
         </style>
 
-        <div
-            class="columns is-centered is-vcentered is-paddingless"
-        >
-            <ins
-                class="adsbygoogle  large-leaderboard  is-centered animate-on-scroll"
-                data-ad-client="{{ site.data-ad-client }}"
-                data-ad-slot="3487917390"
-            >
-            </ins>
+        <div class="columns is-centered is-vcentered">
+            <div class="column is-one-third has-text-centered">
+                <ins
+                    class="adsbygoogle large-leaderboard"
+                    data-ad-client="{{ site.data-ad-client }}"
+                    data-ad-slot="3487917390"
+                >
+                </ins>
+            </div>
         </div>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 
     {%- when 'skyscraper' -%}
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.data-ad-client }}"
+            crossorigin="anonymous"
+        ></script>
         <style>
             .skyscraper {
                 width: 250px;
@@ -181,16 +209,15 @@
             }
         </style>
 
-        <!-- Horizontal ( Responsive ) -->
-        <div
-            class="columns is-centered is-vcentered is-paddingless"
-        >
-            <ins
-                class="adsbygoogle  skyscraper  is-centered animate-on-scroll"
-                data-ad-client="{{ site.data-ad-client }}"
-                data-ad-slot="8939839370"
-            >
-            </ins>
+        <div class="columns is-centered is-vcentered">
+            <div class="column is-narrow has-text-centered">
+                <ins
+                    class="adsbygoogle skyscraper"
+                    data-ad-client="{{ site.data-ad-client }}"
+                    data-ad-slot="8939839370"
+                >
+                </ins>
+            </div>
         </div>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
@@ -255,18 +282,27 @@
             crossorigin="anonymous"
         ></script>
 
-        <!-- small skyscraper -->
-        <ins
-            class="adsbygoogle small-skyscraper"
-            data-ad-client="{{ site.data-ad-client }}"
-            data-ad-slot="3487917390"
-        ></ins>
-
+        <!-- Small Skyscraper -->
+        <div class="columns is-centered is-vcentered">
+            <div class="column is-narrow has-text-centered">
+                <ins
+                    class="adsbygoogle small-skyscraper"
+                    data-ad-client="{{ site.data-ad-client }}"
+                    data-ad-slot="3487917390"
+                >
+                </ins>
+            </div>
+        </div>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 
     {%- when 'article' -%}
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.data-ad-client }}"
+            crossorigin="anonymous"
+        ></script>
         <style>
             .article {
                 border-radius: 10px;
@@ -280,20 +316,30 @@
             }
         </style>
 
-        <ins
-            class="adsbygoogle article"
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="{{ site.data-ad-client }}"
-            data-ad-slot="6501428979"
-        ></ins>
+        <div class="columns is-centered">
+            <div class="column is-full has-text-centered">
+                <ins
+                    class="adsbygoogle article"
+                    data-ad-layout="in-article"
+                    data-ad-format="fluid"
+                    data-ad-client="{{ site.data-ad-client }}"
+                    data-ad-slot="6501428979"
+                >
+                </ins>
+            </div>
+        </div>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 
     {%- when 'multiplex' -%}
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.data-ad-client }}"
+            crossorigin="anonymous"
+        ></script>
         <ins
-            class="adsbygoogle ad"
+            class="adsbygoogle"
             style="display:block"
             data-ad-format="autorelaxed"
             data-ad-client="{{ site.data-ad-client }}"
@@ -302,6 +348,7 @@
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
+
     {%- else -%}
         <!-- Invalid ad type -->
 {%- endcase -%}
