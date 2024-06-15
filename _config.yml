@@ -165,7 +165,7 @@ email: your-email@domain.com
 description: >
   Open source project for creating and customizing resumes using the Bulma CSS framework.
 baseurl: ""
-url: "https://im-resume.example.com"
+url: "https://resume.imswarnil.com"
 permalink: pretty
 
 # Theme Customization
