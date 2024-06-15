@@ -1,0 +1,15 @@
+<div class="summary">
+    <div class="title is-size-4 has-text-primary has-text-weight-bold">
+        {% if site.summary.icon %}
+            <i class="mr-1 {{ site.summary.icon }}"></i>
+        {% else %}
+            <i class="fas fa-user"></i>
+            <!-- Default icon class if not specified in config -->
+        {% endif %}
+        SUMMARY
+        <hr class="has-background-primary" style="height: 2px; margin-top: 0.5rem;">
+    </div>
+    <div class="wrapper">
+        {{ site.summary.content | markdownify | default: 'No summary content found in _config.yml.' }}
+    </div>
+</div>

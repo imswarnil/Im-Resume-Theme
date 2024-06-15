@@ -8,11 +8,7 @@ $family-sans-serif: "Roboto", "Arial", sans-serif !default;
 $family-monospace: "Roboto Mono", monospace !default;
 $render-mode: optimizeLegibility !default;
 
-@import "syntax";
 
-// Import Main CSS file from theme
-{% if site.custom_theme %}
-  @import "theme/index";
-{% endif %}
 
+// Import custom resume extensions
 @import "main";

@@ -3,12 +3,8 @@
 @import "../node_modules/bulma/sass/index";
 
 
-// Import custom Bulma extensions
-@import "../_sass/extensions/switch";
-@import "../_sass/extensions/sticky";
-
-@import "./utility/text-highlighter";
-
+// Import custom resume extensions
+@import "../_sass/resume/index";
 // Custom styles and overrides
 html {
   scroll-behavior: smooth;

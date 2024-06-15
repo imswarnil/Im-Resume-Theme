@@ -1,0 +1,84 @@
+<!-- _layouts/skills.html -->
+<div class="skills">
+    <div class="title is-size-5 has-text-primary has-text-weight-bold">SKILLS</div>
+    <div class="columns is-multiline mt-3">
+        {% for skill in site.skills %}
+            <div class="column is-12">
+                <div class="skill-item columns is-vcentered">
+                    <div class="column is-2 is-offset-1 mt-2">
+                        <div class="skill-icon">
+                            {% if skill.icon %}
+                                <span class="icon is-large {{ skill.icon }}"></span>
+                            {% elsif skill.image %}
+                                <img
+                                    src="{{ skill.image }}"
+                                    alt="{{ skill.name }} icon"
+                                >
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="columns is-multiline">
+                            <div class="is-size-6">{{ skill.name }}</div>
+                            {% if skill.proficiency %}
+                                <progress
+                                    class="progress is-primary"
+                                    max="100"
+                                    value="{{ skill.proficiency_percent }}"
+                                ></progress>
+                                <span class="progress-label has-text-right mt-2 is-size-6">
+                                    {{- skill.proficiency_percent }}%</span
+                                >
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<style>
+    /* Custom CSS for skills section */
+
+    .progress {
+        height: 6px;
+        border-radius: 5px;
+        background-color: #f0f0f0; /* Light grey background */
+        margin-top: 5px;
+    }
+
+    .progress-bar {
+        width: calc(var(--progress-percent) * 1%);
+        background-color: #00d1b2; /* Primary color for filled area */
+        transition: width 0.3s ease;
+    }
+
+    .progress-label {
+        font-size: 12px;
+    }
+
+    /* Larger icon size */
+    .icon.is-large {
+        font-size: 2.5rem;
+    }
+
+    /* Override Bulma grid spacing */
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+        .skill-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .skill-icon {
+            margin-bottom: 10px;
+        }
+
+        .column.is-3 .icon.is-large,
+        .column.is-3 img {
+            max-width: 48px;
+            max-height: 48px;
+        }
+    }
+</style>
