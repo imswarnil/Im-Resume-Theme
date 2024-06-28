@@ -1,0 +1,29 @@
+<div class="projects mt-5">
+    <div class="title is-size-5 has-text-primary has-text-weight-bold">
+        <i class="mr-1 {{ site.projects.icon }}"></i> PROJECTS
+    </div>
+    <hr class="has-background-primary" style="height: 3px; margin-top: 0.5rem;">
+    {% for item in site.projects.items %}
+        <div class="columns mb-4 ">
+            <div class="column is-2">
+                <img class="image is-64x64" src="{{ item.logo }}" alt="{{ item.name }}">
+            </div>
+            <div class="column ">
+                <div class="is-size-5">
+                    <b>{{ item.name }}</b>
+                    <div class=" tag">{{ item.duration }}</div>
+                </div>
+                <p class="is-size-6 mt-2">{{ item.summary }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<style>
+    .reddish-image {
+        filter: sepia(1) hue-rotate(-50deg) saturate(5) brightness(0.8);
+    }
+
+    .black-and-white {
+        filter: grayscale(1) contrast(1.2);
+    }
+</style>

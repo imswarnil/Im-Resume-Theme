@@ -1,0 +1,40 @@
+<div class="education mt-5">
+    <div class="title is-size-5 has-text-primary has-text-weight-bold">
+        <i class="mr-1 {{ site.education.icon }}"></i> EDUCATION
+    </div>
+
+    <!-- Underline separator -->
+    <hr class="has-background-primary" style="height: 2px; margin-top: 0.5rem;">
+
+    <div class="table-container">
+        <table
+            class="table is-fullwidth is-hoverable is-narrow"
+        >
+            <tbody>
+                {% for item in site.education.items %}
+                    <tr>
+                        <td style="width: 96px;">
+                            <img src="{{ item.image }}" alt="University Logo" width="64" height="64">
+                        </td>
+                        <td class="has-text-weight-semibold">
+                            <div class="content">
+                                <p>
+                                    <strong>{{ item.institution }}</strong><br>
+                                    <span class="has-text-weight-semibold">{{ item.degree }}</span><br>
+                                    {{ item.location }}
+                                </p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content">
+                                <p class="mb-2">{{ item.details }}</p>
+                                <p class="tag is-primary is-light">CGPA: {{ item.cgpa }}</p>
+                            </div>
+                        </td>
+                        <td class=" has-text-weight-semibold">{{ item.duration }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

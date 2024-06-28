@@ -1,0 +1,47 @@
+<div class="languages mt-5">
+    <div class="title is-size-5 has-text-primary has-text-weight-bold">
+        <i class="mr-1 {{ site.languages.icon }}"></i> LANGUAGES I KNOW
+    </div>
+    <hr class="has-background-primary" style="height: 2px; margin-top: 0.5rem;">
+
+    <div class="table-container mt-3">
+        <table class="table is-fullwidth is-hoverable">
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Read</th>
+                    <th>Write</th>
+                    <th>Speak</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for language in site.languages.items %}
+                    <tr>
+                        <td>{{ language.name }}</td>
+                        <td>
+                            {% if language.read %}
+                                <span class="icon has-text-success">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if language.write %}
+                                <span class="icon has-text-success">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if language.speak %}
+                                <span class="icon has-text-success">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
