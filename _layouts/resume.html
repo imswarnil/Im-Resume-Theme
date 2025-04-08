@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+<body>
+     <style>
+        .main-wrapper {
+            background-color: #f7f7f7;
+            padding: 2rem;
+        }
+
+        .resume-wrapper {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .resume-header {
+            margin-bottom: 2rem;
+        }
+
+        .resume-name {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .resume-tagline {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .resume-contact {
+            font-size: 0.9rem;
+        }
+
+        .resume-contact a {
+            color: #3273dc;
+            text-decoration: none;
+        }
+
+        .resume-intro {
+            margin-bottom: 2rem;
+        }
+
+        .resume-profile-image {
+            border-radius: 50%;
+        }
+
+        .resume-section-heading {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .resume-list {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        .resume-degree {
+            font-weight: bold;
+        }
+
+        .resume-degree-org {
+            color: #555;
+        }
+
+        .resume-degree-time {
+            color: #777;
+        }
+    </style>
+    <div class="main-wrapper">
+        <div class="container px-3 px-lg-5">
+            <article class="resume-wrapper mx-auto p-5 mb-5 my-5 shadow-lg">
+                <div class="resume-header">
+                    <div class="columns is-vcentered">
+                        <div class="column is-8">
+                            <h2 class="resume-name">Simon Doe</h2>
+                            <div class="resume-tagline">Senior Software Engineer</div>
+                        </div>
+                        <div class="column is-4">
+                            <ul class="resume-contact">
+                                <li><a href="tel:#"><i class="fas fa-phone-square fa-fw fa-lg me-2"></i>0123 4567 890</a></li>
+                                <li><a href="mailto:#"><i class="fas fa-envelope-square fa-fw fa-lg me-2"></i>simon@yourwebsite.com</a></li>
+                                <li><a href="#"><i class="fas fa-globe fa-fw fa-lg me-2"></i>www.yourwebsite.com</a></li>
+                                <li><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>New York</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="resume-intro py-3">
+                    <div class="columns is-vcentered">
+                        <div class="column is-2 has-text-centered">
+                            <img class="resume-profile-image mb-3 mb-md-0 me-md-5 ms-md-0 rounded mx-auto" src="assets/images/resume-profile.png" alt="image">
+                        </div>
+                        <div class="column is-10">
+                            <p>Summarise your career here. <a class="theme-link" href="https://themes.3rdwavemedia.com/resources/sketch-template/resume-sketch-sketch-resume-template-for-software-developers/" target="_blank">You can make a PDF version of your resume using our free Sketch template here</a>. Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="resume-body">
+                    <div class="columns">
+                        <div class="column is-8">
+                            <section class="work-section py-3">
+                                <h3 class="resume-section-heading">Work Experiences</h3>
+                                <div class="item mb-3">
+                                    <div class="columns is-vcentered mb-2">
+                                        <div class="column is-8">
+                                            <h4 class="item-title">Senior Software Engineer</h4>
+                                        </div>
+                                        <div class="column is-4 has-text-right has-text-grey">
+                                            Google | 2023 - Present
+                                        </div>
+                                    </div>
+                                    <div class="item-content">
+                                        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.</p>
+                                        <ul class="resume-list">
+                                            <li>Lorem ipsum dolor sit amet, consectetuer.</li>
+                                            <li>Aenean commodo ligula eget dolor.</li>
+                                            <li>Etiam ultricies nisi vel augue.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item mb-3">
+                                    <div class="columns is-vcentered mb-2">
+                                        <div class="column is-8">
+                                            <h4 class="item-title">Lead Software Developer</h4>
+                                        </div>
+                                        <div class="column is-4 has-text-right has-text-grey">
+                                            Apple | 2022 - 2023
+                                        </div>
+                                    </div>
+                                    <div class="item-content">
+                                        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel.</p>
+                                        <ul class="resume-list">
+                                            <li>Lorem ipsum dolor sit amet, consectetuer.</li>
+                                            <li>Aenean commodo ligula eget dolor.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item mb-3">
+                                    <div class="columns is-vcentered mb-2">
+                                        <div class="column is-8">
+                                            <h4 class="item-title">Senior Software Developer</h4>
+                                        </div>
+                                        <div class="column is-4 has-text-right has-text-grey">
+                                            Dropbox | 2020 - 2022
+                                        </div>
+                                    </div>
+                                    <div class="item-content">
+                                        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="columns is-vcentered mb-2">
+                                        <div class="column is-8">
+                                            <h4 class="item-title">Senior Developer</h4>
+                                        </div>
+                                        <div class="column is-4 has-text-right has-text-grey">
+                                            Uber | 2019 - 2020
+                                        </div>
+                                    </div>
+                                    <div class="item-content">
+                                        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="columns is-vcentered mb-2">
+                                        <div class="column is-8">
+                                            <h4 class="item-title">Backend Developer</h4>
+                                        </div>
+                                        <div class="column is-4 has-text-right has-text-grey">
+                                            Amazon | 2018 - 2019
+                                        </div>
+                                    </div>
+                                    <div class="item-content">
+                                        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="columns is-vcentered mb-2">
+                                        <div class="column is-8">
+                                            <h4 class="item-title">Junior Developer</h4>
+                                        </div>
+                                        <div class="column is-4 has-text-right has-text-grey">
+                                            Facebook | 2017 - 2018
+                                        </div>
+                                    </div>
+                                    <div class="item-content">
+                                        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="column is-4">
+                            <section class="education-section py-3">
+                                <h3 class="resume-section-heading">Education</h3>
+                                <div class="item mb-3">
+                                    <h4 class="resume-degree">Masters in Computer Science</h4>
+                                    <div class="resume-degree-org">University College London</div>
+                                    <div class="resume-degree-time">2016 - 2017</div>
+                                </div>
+                                <div class="item">
+                                    <h4 class="resume-degree">BSc in Computer Science</h4>
+                                    <div class="resume-degree-org">University of Manchester</div>
+                                    <div class="resume-degree-time">2013 - 2016</div>
+                                </div>
+                            </section>
+                            <section class="skills-section py-3">
+                                <h3 class="resume-section-heading">Skills</h3>
+                                <div class="columns">
+                                    <div class="column">
+                                        <ul class="resume-list">
+                                            <li>JavaScript</li>
+                                            <li>Python</li>
+                                            <li>Java</li>
+                                            <li>C++</li>
+                                        </ul>
+                                    </div>
+                                    <div class="column">
+                                        <ul class="resume-list">
+                                            <li>React</li>
+                                            <li>Node.js</li>
+                                            <li>Express</li>
+                                            <li>Django</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="languages-section py-3">
+                                <h3 class="resume-section-heading">Languages</h3>
+                                <ul class="resume-list">
+                                    <li>English (Native)</li>
+                                    <li>Spanish (Professional)</li>
+                                    <li>French (Intermediate)</li>
+                                </ul>
+                            </section>
+                            <section class="interests-section py-3">
+                                <h3 class="resume-section-heading">Interests</h3>
+                                <ul class="resume-list">
+                                    <li>Coding</li>
+                                    <li>Reading</li>
+                                    <li>Gaming</li>
+                                    <li>Traveling</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>

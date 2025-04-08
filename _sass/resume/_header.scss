@@ -1,0 +1,103 @@
+// Custom SCSS for resume header and related classes
+
+
+// Styles for .is-resume-header
+.is-resume-header {
+   
+    // Image column styles
+    .column.is-2 {
+        text-align: center;
+
+        .image {
+            height: auto;
+            margin: 0 auto;
+            padding: 5px;
+        }
+    }
+
+    // Name and job title column styles
+    .column.is-7 {
+        .content {
+            h1.title {
+                font-size: 4rem;
+                margin-bottom: 0.1rem;
+                &:hover {
+                    color: $primary;
+                }
+                span.first
+                {
+                    color : $primary;
+                }
+            }
+            p.subtitle {
+                margin-bottom: 10px;
+                letter-spacing: 1.6px;
+                
+                i {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    // Details column styles
+    .column.is-3 {
+        .content.has-text-centered-mobile {
+            p {
+                margin-bottom: 0.75rem;
+                line-height: 0.9;
+                font-size: smaller;
+                strong {
+                    font-weight: bold;
+                    letter-spacing: 1.15px;
+                }
+            }
+
+            // Social icons styles
+            .social-icons {
+                font-size: smaller;
+                .social-icon {
+                    display: inline-block;
+                    margin-right: 1rem;
+
+                    .icon {
+                        margin-right: 0.5rem;
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Responsive media query example (adjust as needed)
+    @media screen and (max-width: 768px) {
+        // Adjust image column for smaller screens
+        .column.is-2 {
+            .image {
+                max-width: 96px; // Adjust size for smaller screens
+            }
+        }
+
+        // Adjust name and job title column for smaller screens
+        .column.is-7 {
+            .content {
+                h1.title {
+                    font-size: 2.5rem; // Adjust font size for smaller screens
+                }
+            }
+        }
+
+        // Adjust details column for smaller screens
+        .column.is-3 {
+            .content.has-text-centered-mobile {
+                .social-icons {
+                    .social-icon {
+                        margin-right: 0.5rem; // Adjust spacing for smaller screens
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<div class="achievements mt-5">
+    <div class="container">
+        <div class="title is-size-5 has-text-primary has-text-weight-bold">
+            <span class="icon">
+                <i class="fas fa-award"></i>
+            </span>
+            ACHIEVEMENTS
+        </div>
+        <hr class="has-background-primary" style="height: 2px; margin-top: 0.5rem;">
+
+        <div class="columns is-multiline mt-5">
+            {% for achievement in site.achievements.items %}
+                <div class="column is-half">
+                    <div class="achievement-item">
+                        <div class="achievement-bullet">
+                            <img
+                                class="image is-32x32 mb-3"
+                                src="{{ achievement.icon }}"
+                                alt="{{ achievement.title }} icon"
+                            >
+                        </div>
+                        <div class="achievement-details">
+                            <div class="title is-size-5">{{ achievement.title }}</div>
+                            <div class="subtitle is-size-6">{{ achievement.subtitle }}</div>
+                            <div class="description">{{ achievement.description }}</div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

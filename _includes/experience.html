@@ -1,0 +1,48 @@
+<div class="experience mt-5">
+    <div class="title is-size-5 has-text-primary has-text-weight-bold">
+        <i class="mr-1 {{ site.experience.icon }}"></i> EXPERIENCE
+    </div>
+    <hr class="has-background-primary" style="height: 2px; margin-top: 0.5rem;">
+    {% for item in site.experience.items %}
+        <div class="item mt-3 p-1">
+            <div class="is-flex is-align-items-center">
+                <div class="is-flex-grow-0 mr-3">
+                    <img
+                        class="reddish-image image is-24x24"
+                        src="{{ item.logo }}"
+                        alt="{{ item.company }} logo"
+                    >
+                </div>
+                <div class="is-flex-grow-1">
+                    <div class="is-flex is-justify-content-space-between is-align-items-center">
+                        <div>
+                            <b>{{ item.company }},</b>
+                            <span class="has-text-weight-semi-bold">
+                                {{ item.location }} —
+                                <i>{{ item.position }}</i>
+                            </span>
+                        </div>
+                        <div class="is-hidden-mobile is-size-7 tag is-primary is-light">{{ item.duration }}</div>
+                    </div>
+                    <div class="is-hidden-tablet is-size-7 tag is-primary is-light mt-2">{{ item.duration }}</div>
+                </div>
+            </div>
+
+            <ul class="p-1 mt-3" style="list-style: disc; margin-left: 3em">
+                {% for detail in item.details %}
+                    <li>{{ detail }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>
+
+<style>
+    .reddish-image {
+        filter: sepia(1) hue-rotate(-50deg) saturate(5) brightness(0.8);
+    }
+
+    .black-and-white {
+        filter: grayscale(1) contrast(1.2);
+    }
+</style>

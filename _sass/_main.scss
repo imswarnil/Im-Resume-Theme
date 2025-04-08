@@ -1,21 +1,11 @@
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-@import "custom";
-@import "syntax";
-// Import Bulma and its components
-@import "../node_modules/bulma/sass/utilities";
-@import "../node_modules/bulma/sass/utilities/mixins";
-@import "../node_modules/bulma/sass/themes";
-@import "../node_modules/bulma/sass/base";
-@import "../node_modules/bulma/sass/elements";
-@import "../node_modules/bulma/sass/form";
-@import "../node_modules/bulma/sass/components";
-@import "../node_modules/bulma/sass/grid";
-@import "../node_modules/bulma/sass/layout";
-@import "../node_modules/bulma/sass/base/skeleton";
-@import "../node_modules/bulma/sass/helpers";
+// Import Bulma
+@import "../node_modules/bulma/sass/index";
 
+
+// Import custom resume extensions
+@import "../_sass/resume/index";
+// Custom styles and overrides
 html {
   scroll-behavior: smooth;
 }

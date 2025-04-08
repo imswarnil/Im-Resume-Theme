@@ -1,76 +1,78 @@
-<nav
-    class="navbar {% if site.fixed_navbar %} is-fixed-{{ site.fixed_navbar }} {% endif %}"
-    x-data="{ openNav: false }"
->
-    <div class="container">
-        <div class="navbar-brand">
-            <a href="{{ site.baseurl }}/" class="navbar-item">
-                <img
-                    src="{{ site.logo_url }}"
-                    alt="Logo"
-                    style="max-height: 3rem; margin-right: 0.5rem;"
-                >
-                {{ site.title }}
-            </a>
-            <a
-                role="button"
-                class="navbar-burger burger"
-                aria-label="menu"
-                aria-expanded="false"
-                data-target="navMenu"
-                :class="{ 'is-active': openNav }"
-                x-on:click="openNav = !openNav"
-            >
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
-            <div class="navbar-end">
-                <a href="{{ site.baseurl }}/" class="navbar-item {% if page.url == "/" %}is-active{% endif %}">Home</a>
-                {% if site.data.navigation %}
-                    {% for item in site.data.navigation %}
-                        {% if item.dropdown %}
-                            <div class="navbar-item has-dropdown is-hoverable {% if site.fixed_navbar == 'bottom' %} has-dropdown-up {% endif %}">
-                                <a
-                                    href="{{ item.link | relative_url }}"
-                                    class="navbar-link {% if page.url contains item.link %}is-active{% endif %}"
-                                >
-                                    {{- item.name -}}
-                                </a>
-                                <div class="navbar-dropdown">
-                                    {% for subitem in item.dropdown %}
-                                        <a
-                                            href="{{ subitem.link | relative_url }}"
-                                            class="navbar-item {% if subitem.link == page.url %}is-active{% endif %}"
-                                        >
-                                            {{- subitem.name -}}
-                                        </a>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        {% else %}
-                            <a
-                                href="{{ item.link | relative_url }}"
-                                class="navbar-item {% if item.link == page.url %}is-active{% endif %}"
-                            >
-                                {{- item.name -}}
-                            </a>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-            </div>
+<div class="hero is-white is-small is-resume-header">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-mobile is-multiline is-vcentered">
+                <!-- Image column -->
+                <div class="column is-3-mobile is-one-quarter-tablet is-2 has-text-centered">
+                    <figure class="image is-128x128">
+                        <img class="is-rounded" src="{{ site.image }}" alt="Profile Image">
+                    </figure>
+                </div>
 
-            <div class="navbar-end">
-                {% if site.gh_sponsor %}
-                    <a class="navbar-item" href="https://github.com/sponsors/{{ site.gh_sponsor }}">
-                        <span class="icon gh-sponsor"><i class="fas fa-heart"></i></span>
-                        <span>Sponsor</span>
-                    </a>
-                {% endif %}
+                <!-- Name and job title column -->
+                <div class="column is-9-mobile is-three-quarters-tablet is-7">
+                    <div class="content">
+                        {% assign first_name = site.first_name %}
+                        {% assign last_name = site.last_name %}
+                        {% assign full_name = site.full_name %}
+
+                        {% if first_name and last_name %}
+                            <h1 class="title">
+                                <span class="first">{{ first_name }}</span>
+                                <span>{{ last_name }}</span>
+                            </h1>
+                        {% elsif full_name %}
+                            <h1 class="title">{{ full_name }}</h1>
+                        {% else %}
+                            <h1 class="title">Edit config.yml names</h1>
+                        {% endif %}
+
+                        <p class="subtitle">
+                            <i class="fas fa-briefcase has-text-grey-darker	"></i> {{ site.job_title }} for
+                            {{ site.technology }} at <i class="fas fa-map-marker-alt has-text-grey-darker	"></i>
+                            {{ site.location }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Details column -->
+                <div class="column is-9-mobile is-three-quarters-tablet is-3">
+                    <div class="content has-text-centered-mobile">
+                        {% if site.city or site.country %}
+                            <p>
+                                <strong>{{ site.city }}, {{ site.country }}</strong>
+                            </p>
+                        {% endif %}
+                        {% if site.contact_no %}
+                            <p><strong>Contact:</strong> {{ site.contact_no }}</p>
+                        {% endif %}
+                        {% if site.email %}
+                            <p><strong>Email:</strong> {{ site.email }}</p>
+                        {% endif %}
+                        {% if site.website %}
+                            <p>
+                                <strong>Website:</strong>
+                                <a href="{{ site.website }}" target="_blank" rel="noopener noreferrer">
+                                    {{- site.website -}}
+                                </a>
+                            </p>
+                        {% endif %}
+                        <div class="social-icons">
+                            {% for social in site.social_media %}
+                                <a
+                                    href="{{ social.url }}"
+                                    class="social-icon"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <span class="icon"><i class="{{ social.icon }}"></i></span>
+                                    <span>{{ social.handle }}</span>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</nav>
+</div>
