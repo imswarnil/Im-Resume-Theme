@@ -164,8 +164,8 @@ logo_url: /assets/logo/im-resume.png
 email: your-email@domain.com
 description: >
   Open source project for creating and customizing resumes using the Bulma CSS framework.
-baseurl: ""
-url: "https://resume.imswarnil.com"
+baseurl: "/Im-Resume-Theme"
+url: ""
 permalink: pretty
 
 # Theme Customization
